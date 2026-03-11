@@ -4,8 +4,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import io
 import time
+import re
 
-# Configuração da página
 st.set_page_config(
     page_title="Radar de Vagas de Dados em Startups",
     page_icon="📊",
@@ -13,21 +13,15 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Palavras-chave para filtrar vagas de dados
 KEYWORDS_DATA = [
-    "data", "data analyst", "data engineer", "analytics", "business intelligence",
-    "bi", "machine learning", "ai", "analista de dados", "cientista de dados",
-    "data science", "engenheiro de dados", "business analyst", "analytic"
+    "data", "dados", "data analyst", "data engineer", "analytics", "business intelligence",
+    "bi", "machine learning", "ml", "ai", "analista de dados", "cientista de dados",
+    "data science", "engenheiro de dados", "business analyst", "analytic", "devops"
 ]
 
 KEYWORDS_REMOTE = ["remote", "remoto", "anywhere", "brazil remote", "home office"]
 
-# ScraperAPI - Serviço para contornar bloqueios
-SCRAPER_API_URL = "http://api.scraperapi.com"
-SCRAPER_API_KEY = "e87768429bb37c0a0fc01891c22cf710"  # Obtenha em https://www.scraperapi.com
-
 def load_companies():
-    """Carrega lista de empresas do arquivo"""
     try:
         with open("empresas.txt", "r", encoding="utf-8") as f:
             content = f.read()
@@ -38,81 +32,51 @@ def load_companies():
         st.error("❌ Arquivo 'empresas.txt' não encontrado!")
         return []
 
-def get_page_with_scraper(url, use_scraper=True):
-    """
-    Faz requisição com ou sem ScraperAPI
-    ScraperAPI contorna bloqueios de anti-bot
-    """
-    try:
-        if use_scraper:
-            params = {
-                'api_key': SCRAPER_API_KEY,
-                'url': url,
-                'render': 'false'
-            }
-            response = requests.get(SCRAPER_API_URL, params=params, timeout=15)
-        else:
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-            }
-            response = requests.get(url, headers=headers, timeout=10)
-        
-        response.raise_for_status()
-        return response.text
-        
-    except:
-        return None
-
 def scrape_jobs(company_name):
-    """Faz scrape das vagas de uma empresa"""
+    """Faz scrape das vagas usando múltiplas estratégias"""
     url = f"https://{company_name}.inhire.app/vagas"
     
     try:
-        html = get_page_with_scraper(url, use_scraper=True)
+        # Tenta com headers realistas
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
         
-        if not html:
-            html = get_page_with_scraper(url, use_scraper=False)
-        
-        if not html:
-            return []
-        
-        soup = BeautifulSoup(html, 'html.parser')
+        soup = BeautifulSoup(response.content, 'html.parser')
         jobs = []
         
+        # **Estratégia 1: Encontra pela classe css-1klv894 e css-uormui**
         job_items = soup.find_all('li', class_='css-1klv894')
-        
-        if not job_items:
-            job_items = soup.find_all('a', href=lambda x: x and '/vagas/' in x)
         
         for item in job_items:
             try:
-                if item.name == 'a':
-                    link = item.get('href', '')
-                    title_elem = item.find('div', class_='css-uormui')
-                    if not title_elem:
-                        title_elem = item
-                    title = title_elem.get_text(strip=True)
-                else:
-                    link_elem = item.find('a')
-                    if not link_elem:
-                        continue
-                    
-                    link = link_elem.get('href', '')
-                    title_elem = item.find('div', class_='css-uormui')
-                    if not title_elem:
-                        continue
-                    
-                    title = title_elem.get_text(strip=True)
-                
-                if not link or not title:
+                # Encontra o link
+                link_elem = item.find('a')
+                if not link_elem or not link_elem.get('href'):
                     continue
                 
+                link = link_elem.get('href', '')
+                
+                # Encontra o título pela classe css-uormui
+                title_elem = item.find('div', class_='css-uormui')
+                if not title_elem:
+                    continue
+                
+                title = title_elem.get_text(strip=True)
+                
+                if not title or not link:
+                    continue
+                
+                # Extrai localidade
                 localidade = ""
                 if " | " in title:
                     parts = title.split(" | ")
                     if len(parts) > 1:
                         localidade = parts[-1].strip()
                 
+                # Garante URL absoluta
                 if not link.startswith('http'):
                     link = f"https://{company_name}.inhire.app{link}"
                 
@@ -122,28 +86,55 @@ def scrape_jobs(company_name):
                     'localidade': localidade,
                     'link': link
                 })
-            except:
+            except Exception as e:
                 continue
+        
+        # **Estratégia 2: Se não encontrou, tenta regex no HTML bruto**
+        if not jobs:
+            html_text = str(soup)
+            # Procura por padrões como "Analista de dados sênior | Remoto"
+            pattern = r'<div[^>]*class="css-uormui[^>]*>([^<]+)</div>'
+            matches = re.findall(pattern, html_text)
+            
+            for title in matches:
+                title = title.strip()
+                if title and len(title) > 3:
+                    localidade = ""
+                    if " | " in title:
+                        parts = title.split(" | ")
+                        if len(parts) > 1:
+                            localidade = parts[-1].strip()
+                    
+                    jobs.append({
+                        'empresa': company_name,
+                        'titulo': title,
+                        'localidade': localidade,
+                        'link': url  # Link genérico se não encontrar específico
+                    })
         
         return jobs
         
-    except:
+    except requests.exceptions.Timeout:
+        return []
+    except requests.exceptions.ConnectionError:
+        return []
+    except Exception as e:
         return []
 
 def is_data_job(job_title):
-    """Verifica se a vaga é relacionada a dados"""
+    """Verifica se a vaga é de dados"""
     title_lower = job_title.lower()
     return any(keyword in title_lower for keyword in KEYWORDS_DATA)
 
 def is_remote_job(localidade):
-    """Verifica se a vaga é remota"""
+    """Verifica se é remota"""
     if not localidade:
         return False
     localidade_lower = localidade.lower()
     return any(keyword in localidade_lower for keyword in KEYWORDS_REMOTE)
 
 def filter_jobs(all_jobs, filter_company=None, filter_keyword=None):
-    """Filtra vagas por empresa e palavra-chave"""
+    """Filtra vagas"""
     filtered = all_jobs.copy()
     
     if filter_company and filter_company != "Todas":
@@ -162,20 +153,18 @@ def main():
     
     st.markdown("""
     Busca vagas relacionadas à **área de dados** em startups que utilizam o ATS **InHire**.
-    
-    Filtra automaticamente por palavras-chave como: Data Analyst, Data Engineer, Machine Learning, etc.
     """)
     
     companies = load_companies()
     
     if not companies:
-        st.error("Nenhuma empresa foi carregada. Verifique o arquivo 'empresas.txt'")
+        st.error("Nenhuma empresa foi carregada.")
         return
     
     col1, col2 = st.columns([3, 1])
     
     with col1:
-        st.info(f"📋 Total de empresas a processar: **{len(companies)}**")
+        st.info(f"📋 Empresas a processar: **{len(companies)}**")
     
     with col2:
         if st.button("🔍 Buscar Vagas", key="search_button", use_container_width=True):
@@ -191,17 +180,17 @@ def main():
         all_jobs = []
         companies_processed = 0
         
-        for i, company in enumerate(companies):
-            status_text.text(f"🔄 Buscando vagas em: {company}")
+        for company in companies:
+            status_text.text(f"🔄 Buscando em: {company}")
             
             jobs = scrape_jobs(company)
             data_jobs = [job for job in jobs if is_data_job(job['titulo'])]
             all_jobs.extend(data_jobs)
             
             companies_processed += 1
-            progress_bar.progress((companies_processed) / len(companies))
+            progress_bar.progress(companies_processed / len(companies))
             
-            time.sleep(0.3)
+            time.sleep(0.5)
         
         status_text.text("✅ Busca concluída!")
         progress_bar.empty()
@@ -218,7 +207,7 @@ def main():
     if 'df_jobs' in st.session_state and len(st.session_state.df_jobs) > 0:
         df = st.session_state.df_jobs
         
-        st.success(f"✨ **{st.session_state.jobs_count} vagas de dados encontradas!**")
+        st.success(f"✨ **{st.session_state.jobs_count} vagas encontradas!**")
         
         st.markdown("---")
         st.subheader("🔎 Filtros")
@@ -230,7 +219,7 @@ def main():
             filter_company = st.selectbox("Filtrar por Empresa:", companies_list, key="filter_company")
         
         with col2:
-            filter_keyword = st.text_input("Filtrar por Palavra no Cargo:", placeholder="Ex: Engineer, Analyst...", key="filter_keyword")
+            filter_keyword = st.text_input("Filtrar por Palavra:", placeholder="Ex: Engineer, Analyst...", key="filter_keyword")
         
         df_filtered = filter_jobs(df, filter_company, filter_keyword)
         
@@ -266,18 +255,18 @@ def main():
         col1, col2, col3, col4 = st.columns(4)
         
         with col1:
-            st.metric("Total de Vagas", len(df_filtered))
+            st.metric("Total", len(df_filtered))
         with col2:
             st.metric("Empresas", df_filtered['empresa'].nunique())
         with col3:
-            remote_count = df_filtered[df_filtered['localidade'].apply(is_remote_job)].shape[0]
-            st.metric("Vagas Remotas", remote_count)
+            remote = df_filtered[df_filtered['localidade'].apply(is_remote_job)].shape[0]
+            st.metric("Remotas", remote)
         with col4:
-            local_count = df_filtered[~df_filtered['localidade'].apply(is_remote_job)].shape[0]
-            st.metric("Vagas Presenciais", local_count)
+            presencial = df_filtered[~df_filtered['localidade'].apply(is_remote_job)].shape[0]
+            st.metric("Presenciais", presencial)
     
     elif st.session_state.search_triggered:
-        st.warning("⚠️ Nenhuma vaga de dados encontrada.")
+        st.warning("⚠️ Nenhuma vaga encontrada.")
 
 if __name__ == "__main__":
     main()
