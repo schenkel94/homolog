@@ -11,7 +11,7 @@ import streamlit as st
 from bs4 import BeautifulSoup
 
 
-SCRAPER_API_KEY = os.getenv("SCRAPER_API_KEY")
+SCRAPER_API_KEY = os.getenv("e87768429bb37c0a0fc01891c22cf710")
 
 DEFAULT_EMPRESAS_FILE = "empresas.txt"
 
