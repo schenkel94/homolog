@@ -30,11 +30,9 @@ def get_company_list(filename="empresas.txt") -> List[str]:
         return [line.strip() for line in f if line.strip()]
 
 def fetch_page_content(company_name: str, api_key: str) -> str | None:
-    """Busca o conteúdo da página usando ScraperAPI com renderização JS."""
+    """Busca o conteúdo da página usando ScraperAPI (sem renderização JS)."""
     target_url = BASE_URL_TEMPLATE.format(company_name)
-    scraper_url = (
-        f"http://api.scraperapi.com/?api_key={api_key}&render=true&url={urllib.parse.quote(target_url)}"
-    )
+    scraper_url = f"http://api.scraperapi.com/?api_key={api_key}&url={urllib.parse.quote(target_url)}"
     try:
         response = requests.get(scraper_url, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
@@ -44,48 +42,25 @@ def fetch_page_content(company_name: str, api_key: str) -> str | None:
         return None
 
 def parse_inhire_page(html_content: str, company_name: str) -> List[Dict[str, str]]:
-    """Analisa o HTML renderizado para extrair vagas."""
+    """Analisa o HTML para extrair vagas via links 'vagas/'."""
     soup = BeautifulSoup(html_content, "html.parser")
     jobs = []
 
-    # Procura o JSON embutido
-    next_data_script = soup.find("script", {"id": "__NEXT_DATA__"})
-    if next_data_script:
-        try:
-            import json
-            data = json.loads(next_data_script.string)
-            st.json(data)  # Mostra a árvore completa para depuração
+    # Procura links que começam com "vagas/"
+    job_links = soup.find_all("a", href=re.compile(r"^vagas/"))
+    for link in job_links:
+        job_title = link.get_text(strip=True)
+        job_href = link.get("href")
+        job_url = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company_name), job_href)
 
-            # Ajuste conforme a estrutura real
-            page_props = data.get("props", {}).get("pageProps", {})
-            if "jobs" in page_props:
-                for job_data in page_props["jobs"]:
-                    job_title = job_data.get("title")
-                    job_location = job_data.get("location", "Não informado")
-                    job_link = job_data.get("url") or job_data.get("link")
-                    if job_title and job_link:
-                        jobs.append({
-                            "empresa": company_name,
-                            "vaga": job_title,
-                            "local": job_location,
-                            "link": job_link
-                        })
-        except Exception as e:
-            st.warning(f"Falha ao interpretar JSON: {e}")
+        if job_title and job_url:
+            jobs.append({
+                "empresa": company_name,
+                "vaga": job_title,
+                "local": "Não informado",  # pode ser enriquecido se houver tags de localização
+                "link": job_url
+            })
 
-    # Fallback heurístico
-    if not jobs:
-        job_elements = soup.find_all("a", href=re.compile(r"/vaga/", re.IGNORECASE))
-        for element in job_elements:
-            job_title = element.get_text(strip=True)
-            job_link = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company_name), element["href"])
-            if job_title and job_link:
-                jobs.append({
-                    "empresa": company_name,
-                    "vaga": job_title,
-                    "local": "Não informado",
-                    "link": job_link
-                })
     return jobs
 
 def filter_jobs_by_keywords(jobs: List[Dict[str, str]], keywords: List[str]) -> List[Dict[str, str]]:
