@@ -21,24 +21,27 @@ def fetch_page(company):
 def parse_jobs(html, company):
     soup = BeautifulSoup(html, "html.parser")
     jobs = []
-    for link in soup.find_all("a", href=True):
-        if link["href"].startswith("vagas/"):
-            title = link.get_text(strip=True)
-            url = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company), link["href"])
-            text_lower = title.lower()
-            # filtro por keywords
-            if any(k in text_lower for k in KEYWORDS):
-                jobs.append({
-                    "empresa": company,
-                    "nome_vaga": title,
-                    "localidade": extract_location(title),
-                    "link": url,
-                    "data_etl": pd.Timestamp.now().strftime("%Y-%m-%d")
-                })
+    # procura qualquer texto que contenha " | " (ex: "Analista de dados sênior | Remoto")
+    job_elements = soup.find_all(string=re.compile(r".+\|.+"))
+    for elem in job_elements:
+        title = elem.strip()
+        parent = elem.find_parent("a")
+        if parent and parent.get("href", "").startswith("vagas/"):
+            url = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company), parent["href"])
+        else:
+            url = BASE_URL_TEMPLATE.format(company)
+        text_lower = title.lower()
+        if any(k in text_lower for k in KEYWORDS):
+            jobs.append({
+                "empresa": company,
+                "nome_vaga": title,
+                "localidade": extract_location(title),
+                "link": url,
+                "data_etl": pd.Timestamp.now().strftime("%Y-%m-%d")
+            })
     return jobs
 
 def extract_location(title: str) -> str:
-    # tenta extrair localidade depois de "|"
     parts = title.split("|")
     if len(parts) > 1:
         return parts[-1].strip()
