@@ -11,7 +11,7 @@ import streamlit as st
 from bs4 import BeautifulSoup
 
 
-SCRAPER_API_KEY = os.getenv("e87768429bb37c0a0fc01891c22cf710")
+SCRAPER_API_KEY = os.getenv("SCRAPER_API_KEY")
 
 DEFAULT_EMPRESAS_FILE = "empresas.txt"
 
@@ -324,7 +324,7 @@ st.title("Radar de Vagas de Dados em Startups")
 with st.expander("Configuração", expanded=False):
     st.write("A lista de empresas é lida de `empresas.txt` (um slug por linha).")
     st.write("A ScraperAPI Key deve estar no ambiente como `SCRAPER_API_KEY`.")
-    st.code("export SCRAPER_API_KEY=SEU_TOKEN_AQUI")
+    st.code("export SCRAPER_API_KEY=e87768429bb37c0a0fc01891c22cf710")
 
 empresas_list = load_empresas(DEFAULT_EMPRESAS_FILE)
 
