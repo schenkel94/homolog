@@ -247,3 +247,4 @@ if st.button("Buscar vagas"):
             st.dataframe(pd.DataFrame(errors), use_container_width=True, hide_index=True)
 else:
     st.info("Clique em **Buscar vagas** para iniciar.")
+
