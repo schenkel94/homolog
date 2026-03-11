@@ -3,7 +3,7 @@ import re
 import time
 import io
 import urllib.parse
-from typing import List, Dict, Any
+from typing import List, Dict
 
 import requests
 from bs4 import BeautifulSoup
@@ -11,16 +11,18 @@ import pandas as pd
 import streamlit as st
 
 # --- Configurações ---
-SCRAPER_API_KEY = "e87768429bb37c0a0fc01891c22cf710" # TOKEN SIMBÓLICO FORNECIDO PELO USUÁRIO
-
+SCRAPER_API_KEY = "e87768429bb37c0a0fc01891c22cf710"  # TOKEN SIMBÓLICO
 BASE_URL_TEMPLATE = "https://{}.inhire.app/vagas"
-DATA_JOB_KEYWORDS = ["data", "dados", "cientista de dados", "engenheiro de dados", "analista de dados", "machine learning", "inteligência artificial", "business intelligence", "bi"]
-REQUEST_TIMEOUT = 10 # segundos
+DATA_JOB_KEYWORDS = [
+    "data", "dados", "cientista de dados", "engenheiro de dados",
+    "analista de dados", "machine learning", "inteligência artificial",
+    "business intelligence", "bi"
+]
+REQUEST_TIMEOUT = 15  # segundos
 
 # --- Funções Auxiliares ---
 @st.cache_data
 def get_company_list(filename="empresas.txt") -> List[str]:
-    """Lê a lista de empresas de um arquivo."""
     if not os.path.exists(filename):
         st.error(f"Arquivo '{filename}' não encontrado. Crie-o com uma lista de empresas.")
         return []
@@ -28,41 +30,39 @@ def get_company_list(filename="empresas.txt") -> List[str]:
         return [line.strip() for line in f if line.strip()]
 
 def fetch_page_content(company_name: str, api_key: str) -> str | None:
-    """Busca o conteúdo da página usando ScraperAPI."""
+    """Busca o conteúdo da página usando ScraperAPI com renderização JS."""
     target_url = BASE_URL_TEMPLATE.format(company_name)
-scraper_url = f"http://api.scraperapi.com/?api_key={api_key}&render=true&url={urllib.parse.quote(target_url)}"
+    scraper_url = (
+        f"http://api.scraperapi.com/?api_key={api_key}&render=true&url={urllib.parse.quote(target_url)}"
+    )
     try:
         response = requests.get(scraper_url, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status() # Levanta um erro para códigos de status HTTP ruins (4xx ou 5xx)
+        response.raise_for_status()
         return response.text
     except requests.exceptions.RequestException as e:
         st.error(f"Erro ao buscar {target_url} para {company_name}: {e}")
         return None
 
 def parse_inhire_page(html_content: str, company_name: str) -> List[Dict[str, str]]:
-    """
-    Analisa o HTML da página InHire para extrair informações de vagas.
-    Esta função é uma heurística e pode precisar de ajustes com o HTML real.
-    """
+    """Analisa o HTML renderizado para extrair vagas."""
     soup = BeautifulSoup(html_content, "html.parser")
     jobs = []
 
-    # Tenta encontrar vagas em um script JSON embutido (comum em SPAs como Next.js)
-    # Ex: <script id="__NEXT_DATA__" type="application/json">...</script>
+    # Procura o JSON embutido
     next_data_script = soup.find("script", {"id": "__NEXT_DATA__"})
     if next_data_script:
         try:
             import json
             data = json.loads(next_data_script.string)
-            # A estrutura exata de 'data' varia, então isso é uma suposição
-            # Pode ser necessário explorar 'data' para encontrar o caminho correto para as vagas
-            # Exemplo: data['props']['pageProps']['jobs'] ou similar
-            # Por enquanto, vamos tentar uma abordagem genérica se houver uma lista de vagas
-            if isinstance(data, dict) and 'props' in data and 'pageProps' in data and 'jobs' in data['props']['pageProps']:
-                for job_data in data['props']['pageProps']['jobs']:
-                    job_title = job_data.get('title')
-                    job_location = job_data.get('location', 'Não informado')
-                    job_link = job_data.get('url') or job_data.get('link')
+            st.json(data)  # Mostra a árvore completa para depuração
+
+            # Ajuste conforme a estrutura real
+            page_props = data.get("props", {}).get("pageProps", {})
+            if "jobs" in page_props:
+                for job_data in page_props["jobs"]:
+                    job_title = job_data.get("title")
+                    job_location = job_data.get("location", "Não informado")
+                    job_link = job_data.get("url") or job_data.get("link")
                     if job_title and job_link:
                         jobs.append({
                             "empresa": company_name,
@@ -70,59 +70,25 @@ def parse_inhire_page(html_content: str, company_name: str) -> List[Dict[str, st
                             "local": job_location,
                             "link": job_link
                         })
-                if jobs:
-                    return jobs
-        except json.JSONDecodeError:
-            pass # Não era JSON válido
-        except KeyError:
-            pass # Estrutura JSON diferente do esperado
+        except Exception as e:
+            st.warning(f"Falha ao interpretar JSON: {e}")
 
-    # Fallback para parsing de HTML (heurística)
-    # Tenta encontrar "cards" de vagas ou links que pareçam vagas
-    # Classes comuns para cards de vagas: "job-card", "job-item", "vacancy-item"
-    # Links de vagas: <a> com href que contenha "/vaga/" ou "/job/"
-    job_elements = soup.find_all(["div", "a"], class_=re.compile(r"(job|vacancy|vaga)[-_\s]?(card|item|listing)", re.IGNORECASE))
-
-    if not job_elements:
-        # Tenta encontrar links diretos que pareçam vagas
-        job_elements = soup.find_all("a", href=re.compile(r"/(vaga|job|oportunidade)/", re.IGNORECASE))
-
-    for element in job_elements:
-        job_title = ""
-        job_link = ""
-        job_location = "Não informado"
-
-        # Extração do título
-        title_tag = element.find(["h2", "h3", "span"], class_=re.compile(r"(title|name|heading)", re.IGNORECASE))
-        if title_tag:
-            job_title = title_tag.get_text(strip=True)
-        elif element.name == "a" and element.get_text(strip=True): # Se for um link, o texto pode ser o título
+    # Fallback heurístico
+    if not jobs:
+        job_elements = soup.find_all("a", href=re.compile(r"/vaga/", re.IGNORECASE))
+        for element in job_elements:
             job_title = element.get_text(strip=True)
-
-        # Extração do link
-        if element.name == "a" and element.get("href"):
             job_link = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company_name), element["href"])
-        else: # Tenta encontrar um link dentro do elemento
-            link_tag = element.find("a", href=True)
-            if link_tag and link_tag.get("href"):
-                job_link = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company_name), link_tag["href"])
-
-        # Extração da localização (muito heurístico, pode precisar de ajuste)
-        location_tag = element.find(["span", "div", "p"], class_=re.compile(r"(location|local|city)", re.IGNORECASE))
-        if location_tag:
-            job_location = location_tag.get_text(strip=True)
-
-        if job_title and job_link:
-            jobs.append({
-                "empresa": company_name,
-                "vaga": job_title,
-                "local": job_location,
-                "link": job_link
-            })
+            if job_title and job_link:
+                jobs.append({
+                    "empresa": company_name,
+                    "vaga": job_title,
+                    "local": "Não informado",
+                    "link": job_link
+                })
     return jobs
 
 def filter_jobs_by_keywords(jobs: List[Dict[str, str]], keywords: List[str]) -> List[Dict[str, str]]:
-    """Filtra vagas por palavras-chave."""
     filtered_jobs = []
     for job in jobs:
         job_text = (job["vaga"] + " " + job["local"]).lower()
@@ -131,12 +97,10 @@ def filter_jobs_by_keywords(jobs: List[Dict[str, str]], keywords: List[str]) -> 
     return filtered_jobs
 
 def to_excel_bytes(df: pd.DataFrame) -> bytes:
-    """Converte DataFrame para bytes de Excel."""
     output = io.BytesIO()
     with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
         df.to_excel(writer, index=False, sheet_name='Vagas de Dados')
-    processed_data = output.getvalue()
-    return processed_data
+    return output.getvalue()
 
 # --- Streamlit App ---
 st.set_page_config(layout="wide")
@@ -153,7 +117,7 @@ job_title_query = st.sidebar.text_input("Filtrar por Título da Vaga (palavra-ch
 if st.button("Buscar vagas"):
     all_jobs = []
     errors = []
-    html_contents_for_debug = {} # Para armazenar HTMLs para depuração
+    html_contents_for_debug = {}
 
     progress_bar = st.progress(0)
     status_text = st.empty()
@@ -163,7 +127,7 @@ if st.button("Buscar vagas"):
         html_content = fetch_page_content(company, SCRAPER_API_KEY)
 
         if html_content:
-            html_contents_for_debug[company] = html_content # Armazena o HTML
+            html_contents_for_debug[company] = html_content
             jobs_found = parse_inhire_page(html_content, company)
             if jobs_found:
                 all_jobs.extend(jobs_found)
@@ -173,7 +137,7 @@ if st.button("Buscar vagas"):
             errors.append({"empresa": company, "status": "Falha ao buscar conteúdo da página."})
 
         progress_bar.progress((i + 1) / len(company_list))
-        time.sleep(0.5) # Pequeno delay para evitar sobrecarga e ser mais "humano"
+        time.sleep(0.5)
 
     status_text.text("Busca concluída!")
     progress_bar.empty()
@@ -183,7 +147,6 @@ if st.button("Buscar vagas"):
             for company, html in html_contents_for_debug.items():
                 st.subheader(f"HTML de {company}")
                 st.text_area(f"HTML para {company}", html, height=300)
-
 
     if all_jobs:
         df = pd.DataFrame(all_jobs)
