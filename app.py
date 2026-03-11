@@ -30,7 +30,7 @@ def get_company_list(filename="empresas.txt") -> List[str]:
 def fetch_page_content(company_name: str, api_key: str) -> str | None:
     """Busca o conteúdo da página usando ScraperAPI."""
     target_url = BASE_URL_TEMPLATE.format(company_name)
-    scraper_url = f"http://api.scraperapi.com/?api_key={api_key}&url={urllib.parse.quote(target_url)}"
+scraper_url = f"http://api.scraperapi.com/?api_key={api_key}&render=true&url={urllib.parse.quote(target_url)}"
     try:
         response = requests.get(scraper_url, timeout=REQUEST_TIMEOUT)
         response.raise_for_status() # Levanta um erro para códigos de status HTTP ruins (4xx ou 5xx)
