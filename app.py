@@ -30,111 +30,133 @@ def get_company_list(filename="empresas.txt") -> List[str]:
         companies = [line.strip() for line in f if line.strip()]
     return companies
 
-def fetch_page_with_scraperapi(target_url: str) -> str | None:
-    """Faz a requisição da página usando ScraperAPI."""
+def fetch_page_content(url: str) -> str | None:
+    """
+    Faz a requisição HTTP usando ScraperAPI e retorna o conteúdo HTML.
+    Imprime o HTML para depuração.
+    """
     if not SCRAPER_API_KEY:
-        st.error("SCRAPER_API_KEY não está definida. Por favor, configure-a.")
+        st.error("SCRAPER_API_KEY não está definida. Por favor, defina-a.")
         return None
 
-    encoded_target_url = urllib.parse.quote(target_url)
-    scraper_url = f"http://api.scraperapi.com/?api_key={SCRAPER_API_KEY}&url={encoded_target_url}"
+    encoded_url = urllib.parse.quote(url)
+    scraper_url = f"http://api.scraperapi.com/?api_key={SCRAPER_API_KEY}&url={encoded_url}"
 
     try:
         response = requests.get(scraper_url, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status() # Levanta HTTPError para códigos de status de erro (4xx ou 5xx)
-        return response.text
+        response.raise_for_status() # Levanta um erro para códigos de status HTTP ruins (4xx ou 5xx)
+        html_content = response.text
+
+        # --- DEBUG: Imprime o HTML recebido ---
+        print(f"--- HTML recebido para {url} ---")
+        print(html_content[:2000]) # Imprime os primeiros 2000 caracteres para não sobrecarregar
+        print(f"--- Fim do HTML para {url} ---")
+        # --- FIM DEBUG ---
+
+        return html_content
     except requests.exceptions.RequestException as e:
-        st.warning(f"Erro ao buscar {target_url} via ScraperAPI: {e}")
+        st.error(f"Erro ao buscar {url} via ScraperAPI: {e}")
         return None
 
 def parse_inhire_page(html_content: str, company_name: str) -> List[Dict[str, str]]:
     """
-    Analisa o HTML da página InHire para extrair vagas.
-    Esta função usa heurísticas e um fallback para JSON embutido.
+    Analisa o HTML de uma página InHire e extrai as vagas.
+    Esta função é uma heurística e pode precisar de ajustes com o HTML real.
     """
     soup = BeautifulSoup(html_content, "html.parser")
     jobs = []
 
-    # Heurística 1: Procurar por links de vagas ou cards comuns
-    # Este é um exemplo genérico. O ideal é ajustar com o HTML real.
-    job_elements = soup.find_all(["a", "div"], class_=re.compile(r"job|vaga|card", re.I))
+    # Tentativa 1: Procurar por links de vagas ou cards comuns
+    # InHire geralmente usa divs com classes específicas ou links para as vagas.
+    # Vamos procurar por <a> tags que contenham "vaga" ou "job" no href ou texto,
+    # ou divs que pareçam cards de vaga.
 
-    for element in job_elements:
-        title = ""
-        link = ""
-        location = ""
-
-        # Tenta extrair título
-        title_tag = element.find(["h2", "h3", "span"], class_=re.compile(r"title|cargo|position", re.I))
-        if title_tag:
-            title = title_tag.get_text(strip=True)
-        elif element.name == "a" and element.get("title"):
-            title = element.get("title")
-        elif element.name == "a" and element.get_text(strip=True):
-            title = element.get_text(strip=True)
-
-        # Tenta extrair link
-        if element.name == "a" and element.get("href"):
-            link = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company_name), element.get("href"))
-        else:
-            link_tag = element.find("a", href=True)
-            if link_tag:
-                link = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company_name), link_tag.get("href"))
-
-        # Tenta extrair localização (exemplo genérico)
-        location_tag = element.find(["span", "div"], class_=re.compile(r"location|local|city", re.I))
-        if location_tag:
-            location = location_tag.get_text(strip=True)
-
-        if title and link: # Apenas adiciona se tiver título e link
+    # Heurística 1: Links que parecem vagas
+    # Ex: <a href="/vagas/nome-da-vaga" ...>
+    for a_tag in soup.find_all("a", href=True):
+        href = a_tag["href"]
+        if "/vagas/" in href and a_tag.text.strip():
+            job_title = a_tag.text.strip()
+            # Tenta encontrar o local próximo ao link
+            location_element = a_tag.find_next_sibling("span") or a_tag.find_next("div", class_=re.compile("location|local"))
+            location = location_element.text.strip() if location_element else "Não informado"
+            full_link = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company_name), href)
             jobs.append({
                 "empresa": company_name,
-                "vaga": title,
-                "local": location if location else "Não informado",
+                "vaga": job_title,
+                "local": location,
+                "link": full_link
+            })
+
+    # Heurística 2: Cards de vaga (divs com títulos e detalhes)
+    # Esta é uma suposição comum para ATS.
+    # Vamos procurar por divs que contenham um título (h2, h3) e talvez um link.
+    # Classes comuns para cards de vaga: "job-card", "job-listing", "vacancy-item"
+    for job_card in soup.find_all("div", class_=re.compile("job-card|job-listing|vacancy-item|vaga-item", re.IGNORECASE)):
+        job_title_elem = job_card.find(["h2", "h3", "span"], class_=re.compile("title|name|vaga", re.IGNORECASE))
+        job_title = job_title_elem.text.strip() if job_title_elem else "Título não encontrado"
+
+        location_elem = job_card.find("span", class_=re.compile("location|local", re.IGNORECASE))
+        location = location_elem.text.strip() if location_elem else "Não informado"
+
+        link_elem = job_card.find("a", href=True)
+        link = urllib.parse.urljoin(BASE_URL_TEMPLATE.format(company_name), link_elem["href"]) if link_elem else BASE_URL_TEMPLATE.format(company_name)
+
+        if job_title != "Título não encontrado": # Evita adicionar cards vazios
+            jobs.append({
+                "empresa": company_name,
+                "vaga": job_title,
+                "local": location,
                 "link": link
             })
 
-    # Heurística 2: Fallback para dados JSON embutidos (ex: __NEXT_DATA__ ou application/ld+json)
-    # Muitos sites modernos usam isso para renderização no lado do cliente.
-    script_tags = soup.find_all("script", type="application/ld+json")
-    script_tags.extend(soup.find_all("script", id="__NEXT_DATA__"))
-
-    for script in script_tags:
+    # Heurística 3: JSON-LD (Structured Data) - muito comum em páginas de vagas
+    # <script type="application/ld+json">
+    for script_tag in soup.find_all("script", type="application/ld+json"):
         try:
             import json
-            data = json.loads(script.string)
+            data = json.loads(script_tag.string)
             if isinstance(data, dict) and data.get("@type") == "JobPosting":
                 jobs.append({
                     "empresa": company_name,
-                    "vaga": data.get("title", ""),
+                    "vaga": data.get("title", "Título não encontrado"),
                     "local": data.get("jobLocation", {}).get("address", {}).get("addressLocality", "Não informado"),
-                    "link": data.get("url", "")
+                    "link": data.get("url", BASE_URL_TEMPLATE.format(company_name))
                 })
-            elif isinstance(data, dict) and "props" in data and "pageProps" in data["props"] and "jobs" in data["props"]["pageProps"]:
-                # Exemplo de extração de __NEXT_DATA__ (pode variar muito)
-                for job_data in data["props"]["pageProps"]["jobs"]:
-                    jobs.append({
-                        "empresa": company_name,
-                        "vaga": job_data.get("title", ""),
-                        "local": job_data.get("location", "Não informado"),
-                        "link": job_data.get("url", "")
-                    })
-        except (json.JSONDecodeError, TypeError):
-            continue # Ignora scripts que não são JSON ou não têm a estrutura esperada
+            elif isinstance(data, list): # Às vezes é uma lista de objetos JSON-LD
+                for item in data:
+                    if isinstance(item, dict) and item.get("@type") == "JobPosting":
+                        jobs.append({
+                            "empresa": company_name,
+                            "vaga": item.get("title", "Título não encontrado"),
+                            "local": item.get("jobLocation", {}).get("address", {}).get("addressLocality", "Não informado"),
+                            "link": item.get("url", BASE_URL_TEMPLATE.format(company_name))
+                        })
+        except json.JSONDecodeError:
+            continue # Ignora scripts que não são JSON válidos
 
-    return jobs
+    # Remove duplicatas se as heurísticas encontrarem a mesma vaga
+    unique_jobs = []
+    seen_links = set()
+    for job in jobs:
+        if job["link"] not in seen_links:
+            unique_jobs.append(job)
+            seen_links.add(job["link"])
+
+    return unique_jobs
+
 
 def filter_data_jobs(jobs: List[Dict[str, str]]) -> List[Dict[str, str]]:
-    """Filtra vagas que contêm palavras-chave relacionadas a dados."""
-    filtered_jobs = []
+    """Filtra as vagas para incluir apenas as relacionadas à área de dados."""
+    data_jobs = []
     for job in jobs:
         job_title_lower = job["vaga"].lower()
         if any(keyword in job_title_lower for keyword in DATA_JOB_KEYWORDS):
-            filtered_jobs.append(job)
-    return filtered_jobs
+            data_jobs.append(job)
+    return data_jobs
 
 def to_excel_bytes(df: pd.DataFrame) -> bytes:
-    """Converte um DataFrame para bytes de um arquivo Excel."""
+    """Converte um DataFrame pandas para um arquivo Excel em bytes."""
     output = io.BytesIO()
     with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
         df.to_excel(writer, index=False, sheet_name='Vagas de Dados')
@@ -145,58 +167,63 @@ def to_excel_bytes(df: pd.DataFrame) -> bytes:
 st.set_page_config(layout="wide")
 st.title("Radar de Vagas de Dados em Startups")
 
-companies = get_company_list()
+company_list = get_company_list()
 
-if not companies:
+if not company_list:
+    st.warning("Por favor, crie o arquivo 'empresas.txt' com uma lista de empresas (uma por linha).")
     st.stop()
 
 if st.button("Buscar vagas"):
     all_jobs: List[Dict[str, str]] = []
     errors: List[Dict[str, str]] = []
-
     progress_bar = st.progress(0)
     status_text = st.empty()
 
-    for i, company in enumerate(companies):
-        status_text.text(f"Buscando vagas em: {company} ({i+1}/{len(companies)})")
-        target_url = BASE_URL_TEMPLATE.format(company)
-        html_content = fetch_page_with_scraperapi(target_url)
+    for i, company in enumerate(company_list):
+        status_text.text(f"Buscando vagas em: {company} ({i+1}/{len(company_list)})")
+        url = BASE_URL_TEMPLATE.format(company)
+        html_content = fetch_page_content(url)
 
         if html_content:
-            company_jobs = parse_inhire_page(html_content, company)
-            if company_jobs:
-                all_jobs.extend(company_jobs)
-            else:
-                errors.append({"empresa": company, "status": "Nenhuma vaga encontrada ou erro de parsing."})
+            try:
+                company_jobs = parse_inhire_page(html_content, company)
+                if company_jobs:
+                    all_jobs.extend(company_jobs)
+                else:
+                    errors.append({"empresa": company, "status": "Nenhuma vaga encontrada ou parsing falhou."})
+            except Exception as e:
+                errors.append({"empresa": company, "status": f"Erro de parsing: {e}"})
         else:
-            errors.append({"empresa": company, "status": "Erro ao acessar a página."})
+            errors.append({"empresa": company, "status": "Falha ao buscar conteúdo da página."})
 
-        progress_bar.progress((i + 1) / len(companies))
-        time.sleep(0.1) # Pequeno delay para evitar sobrecarga e mostrar progresso
+        progress_bar.progress((i + 1) / len(company_list))
+        time.sleep(0.5) # Pequeno delay para não sobrecarregar
 
     status_text.text("Busca concluída!")
     progress_bar.empty()
 
     if not all_jobs:
-        st.warning("Nenhuma vaga encontrada nas empresas listadas.")
-    else:
-        df_all_jobs = pd.DataFrame(all_jobs)
-        df_data_jobs = pd.DataFrame(filter_data_jobs(all_jobs))
+        st.warning("Nenhuma vaga de dados encontrada em nenhuma das empresas listadas.")
+        if errors:
+            with st.expander("Detalhes dos erros/empresas ignoradas", expanded=False):
+                st.dataframe(pd.DataFrame(errors), use_container_width=True, hide_index=True)
+        st.stop()
 
-        st.subheader(f"Total de vagas de dados encontradas: {len(df_data_jobs)}")
+    df_all_jobs = pd.DataFrame(all_jobs)
+    df_data_jobs = pd.DataFrame(filter_data_jobs(all_jobs))
 
-        # --- Filtros ---
-        st.sidebar.header("Filtros")
+    st.success(f"Total de vagas encontradas (todas as áreas): {len(df_all_jobs)}")
+    st.success(f"Total de vagas de dados encontradas: {len(df_data_jobs)}")
 
-        # Filtro por empresa
-        unique_companies = ["Todas"] + sorted(df_data_jobs["empresa"].unique().tolist())
-        selected_company = st.sidebar.selectbox("Filtrar por empresa:", unique_companies)
-
-        # Filtro por palavra no cargo
-        job_title_query = st.sidebar.text_input("Filtrar por palavra no cargo:", "").strip()
+    if not df_data_jobs.empty:
+        st.subheader("Filtros")
+        col1, col2 = st.columns(2)
+        with col1:
+            selected_company = st.selectbox("Filtrar por empresa:", ["Todas"] + sorted(df_data_jobs["empresa"].unique().tolist()))
+        with col2:
+            job_title_query = st.text_input("Filtrar por palavra no cargo:")
 
         df_view = df_data_jobs.copy()
-
         if selected_company != "Todas":
             df_view = df_view[df_view["empresa"] == selected_company].copy()
 
