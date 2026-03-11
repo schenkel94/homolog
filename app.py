@@ -5,20 +5,18 @@ import io
 import urllib.parse
 from typing import List, Dict
 
-import requests
-from bs4 import BeautifulSoup
 import pandas as pd
 import streamlit as st
+from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
 
 # --- Configurações ---
-SCRAPER_API_KEY = "e87768429bb37c0a0fc01891c22cf710"  # TOKEN SIMBÓLICO
 BASE_URL_TEMPLATE = "https://{}.inhire.app/vagas"
 DATA_JOB_KEYWORDS = [
     "data", "dados", "cientista de dados", "engenheiro de dados",
     "analista de dados", "machine learning", "inteligência artificial",
     "business intelligence", "bi"
 ]
-REQUEST_TIMEOUT = 15  # segundos
 
 # --- Funções Auxiliares ---
 @st.cache_data
@@ -29,24 +27,27 @@ def get_company_list(filename="empresas.txt") -> List[str]:
     with open(filename, "r", encoding="utf-8") as f:
         return [line.strip() for line in f if line.strip()]
 
-def fetch_page_content(company_name: str, api_key: str) -> str | None:
-    """Busca o conteúdo da página usando ScraperAPI (sem renderização JS)."""
+def fetch_page_content(company_name: str) -> str | None:
+    """Busca o conteúdo da página usando Playwright (renderiza JS)."""
     target_url = BASE_URL_TEMPLATE.format(company_name)
-    scraper_url = f"http://api.scraperapi.com/?api_key={api_key}&url={urllib.parse.quote(target_url)}"
     try:
-        response = requests.get(scraper_url, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()
-        return response.text
-    except requests.exceptions.RequestException as e:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(target_url, timeout=60000)
+            page.wait_for_load_state("networkidle")
+            html = page.content()
+            browser.close()
+        return html
+    except Exception as e:
         st.error(f"Erro ao buscar {target_url} para {company_name}: {e}")
         return None
 
 def parse_inhire_page(html_content: str, company_name: str) -> List[Dict[str, str]]:
-    """Analisa o HTML para extrair vagas via links 'vagas/'."""
+    """Analisa o HTML renderizado para extrair vagas via links 'vagas/'."""
     soup = BeautifulSoup(html_content, "html.parser")
     jobs = []
 
-    # Procura links que começam com "vagas/"
     job_links = soup.find_all("a", href=re.compile(r"^vagas/"))
     for link in job_links:
         job_title = link.get_text(strip=True)
@@ -57,7 +58,7 @@ def parse_inhire_page(html_content: str, company_name: str) -> List[Dict[str, st
             jobs.append({
                 "empresa": company_name,
                 "vaga": job_title,
-                "local": "Não informado",  # pode ser enriquecido se houver tags de localização
+                "local": "Não informado",
                 "link": job_url
             })
 
@@ -99,7 +100,7 @@ if st.button("Buscar vagas"):
 
     for i, company in enumerate(company_list):
         status_text.text(f"Buscando vagas em {company}...")
-        html_content = fetch_page_content(company, SCRAPER_API_KEY)
+        html_content = fetch_page_content(company)
 
         if html_content:
             html_contents_for_debug[company] = html_content
