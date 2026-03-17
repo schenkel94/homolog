@@ -1,0 +1,55 @@
+{
+  "data": [
+    {
+      "id": 9749257,
+      "companyId": 400,
+      "name": "Analista de Planejamento Financeiro Sr. (Foco em Dados)",
+      "description": "Quando você pensa em carreira, o que vem à sua mente? Propósito? Colaboração? Ser protagonista para fazer a diferença? No PagBank temos tudo isso e muito mais. 💛&nbsp;Estamos em busca de pessoas que vistam a camisa com orgulho. Gente com vontade de facilitar a vida financeira das pessoas e impulsionar negócios!&nbsp;Tá a fim de uma carreira que rende mais?&nbsp;Confira essa oportunidade e #VemProPags!Responsabilidades e atribuiçõesAtuar em projetos de budget, forecast e projeções financeiras, integrando análises de dados avançadas.Manipular e consolidar grandes bases de dados provenientes de diferentes sistemas.Utilizar SQL e bancos de dados para extração, tratamento e modelagem de informações financeiras.Desenvolver e manter dashboards e relatórios em Power BI, garantindo clareza e precisão.Apoiar o time de FP&amp;A na análise de P&amp;L, cash flow e KPIs.Automatizar processos e propor melhorias baseadas em data analytics.Atuar de forma consultiva junto às áreas de negócio, fornecendo insights estratégicos baseados em dados.Requisitos e qualificaçõesSuperior completo em Engenharia, Ciência de Dados, Economia, Administração ou áreas correlatas.Experiência sólida em análise de dados aplicada a finanças.Domínio de SQL e experiência em bancos de dados relacionais.Conhecimento em Excel avançado e manipulação de grandes volumes de informações.Experiência em Power BI (ou ferramentas similares de BI e Data Viz).Informações adicionaisPara se destacar nesta posição seria legal se você também tivesse:Experiência no setor financeiro, bancário, fintechs ou meios de pagamento.Conhecimentos em Python ou R para modelagem e automação de análises.Experiência em projetos de data pipeline e integração de dados.",
+      "careerPageId": 376,
+      "careerPageName": "PagBank",
+      "careerPageLogo": "https://attachments.gupy.io/production/companies/400/career/376/images/2020-07-22_18-13_logo.png",
+      "type": "vacancy_type_talent_pool",
+      "publishedDate": "2025-08-25T13:35:25.886Z",
+      "applicationDeadline": null,
+      "isRemoteWork": false,
+      "city": "São Paulo",
+      "state": "São Paulo",
+      "country": "Brasil",
+      "jobUrl": "https://pagseguro.gupy.io/job/eyJqb2JJZCI6OTc0OTI1Nywic291cmNlIjoiZ3VweV9wb3J0YWwifQ==?jobBoardSource=gupy_portal",
+      "badges": {
+        "friendlyBadge": false
+      },
+      "disabilities": true,
+      "workplaceType": "hybrid",
+      "careerPageUrl": "https://pagseguro.gupy.io/eyJzb3VyY2UiOiJndXB5X3BvcnRhbCJ9"
+    },
+    {
+      "id": 9748351,
+      "companyId": 23930,
+      "name": "ANALISTA ADMINISTRATIVO JR",
+      "description": "A hora de fazer parte de um time comprometido, acolhedor e que leva saúde para milhões de pessoas, é agora!Estamos na busca de profissionais para compor a nossa equipe!Se você é comprometido(a) e apaixonado(a) por novos desafios, aqui é o seu lugar!Faça seu cadastro e envie seu currículo!Responsabilidades e atribuiçõesAcompanhamentos de processos administrativos; Acolhimento a pacientes, realizar escuta ativa e comunicação assertiva;Auxiliar na orientação de uso do aplicativo e site da operadora;Auxiliar nos agendamentos de consultas e exames;Realizar cliente oculto;Possuir visão sensível para identificar problemas e auxiliar na construção de projetos internos;Requisitos e qualificaçõesObrigatório: Ensino Superior completo/cursando.Desejável:  Pacote Office intermediário.Informações adicionaisCarga horária: 200:00 10:00 12:00 13:00 19:00 SEG A SEX (5X2)﻿Unidade: Avenida presidente Kennedy, 1845, Vila Marinópolis- Rondonópolis MT﻿O que oferecemos?Vale Alimentação;Vale Transporte;Assistência Médica;Assistência Odontológica;Convênio com Farmácia;Seguro de Vida;Auxílio Creche;Totalpass;Universidade Corporativa;Interclube (programa de descontos);Programa Conte Comigo.",
+      "careerPageId": 163712,
+      "careerPageName": "Página de Carreira",
+      "careerPageLogo": "https://attachments.gupy.io/production/companies/23930/career/163712/images/2025-02-19_12-52_companyLogoUrl.png",
+      "type": "vacancy_type_talent_pool",
+      "publishedDate": "2025-08-25T12:13:37.344Z",
+      "applicationDeadline": null,
+      "isRemoteWork": false,
+      "city": "Cuiabá",
+      "state": "Mato Grosso",
+      "country": "Brasil",
+      "jobUrl": "https://hapvidandi.gupy.io/job/eyJqb2JJZCI6OTc0ODM1MSwic291cmNlIjoiZ3VweV9wb3J0YWwifQ==?jobBoardSource=gupy_portal",
+      "badges": {
+        "friendlyBadge": true
+      },
+      "disabilities": false,
+      "workplaceType": "on-site",
+      "careerPageUrl": "https://hapvidandi.gupy.io/eyJzb3VyY2UiOiJndXB5X3BvcnRhbCJ9"
+    }
+  ],
+  "pagination": {
+    "offset": 0,
+    "limit": 2,
+    "total": 403
+  }
+}

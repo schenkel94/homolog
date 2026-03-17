@@ -1,0 +1,5016 @@
+{
+  "props": {
+    "pageProps": {
+      "searchFilters": {
+        "term": "analista"
+      },
+      "params": "term=analista",
+      "toggles": [
+        {
+          "name": "accept-central-accounts-webhook-request",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "action-plan-ia-suggestions",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admin-beta-redirect-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission-allow-user-cancel-contracts",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_bank_setup",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission-benefits-transport-voucher-routing",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_bulk_contract",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_demo_ocr_document",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission-disable-esocial",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_disable_mesa_validation_fifo",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_documents_editable_fields",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_documents_editable_fields_v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission-docusign-variables",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_enable_validation_document_model_ai",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_enable_validation_document_model_ai_rg",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_manage_pre_employee_documents",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_manage_pre_employee_documents_with_no_validation",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission-manual-pre-employees-insertion",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_medical_exam_webhook",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_merge_custom_form_list_items",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_new_custom_documents_creation",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_notify_unsent_documents",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_aso",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_cartao_sus",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_cartao_sus_dependent",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_certificado_reservista",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_cnh",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_comprovante_residencia",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_ctps",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_dados_bancarios",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_informacoes_bancarias",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_pis",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_rg",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_rg_dependent",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_ocr_document_titulo_eleitor",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission-out-of-process-reasons",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_partial_mesa_validation",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission-pdf-viewer-v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_quick_apply_send_email",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_remove_credits_limit",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission-revitalization-company-use-data",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_rs_field_mirroring",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_rs_field_mirroring_residence_proof_document",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_rs_field_mirroring_rg_document",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_sync_position",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_typification_cpf",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission-use-default-nis-e-social",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_aso",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_cartao_sus",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_cnh",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_cpf",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_cpf_dependent",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_ctps",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_dados_bancarios",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_document_model_ai_certificado_reservista",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_document_model_ai_rg",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_document_model_ai_rg_dependent",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_informacoes_bancarias",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_pis",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_rg_dependent",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "admission_validate_titulo_eleitor",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "analytics-report-download-xls",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "applications-move-optimistic",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "application-step-is-equal-fix-enabled",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "applications-tests-public-api",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "assessments-cycle-management-v4",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "assign_candidates_quick_apply_to_quick_apply",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "async-notifications-via-pubsub",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "automatic-opt-in-shared-talent-pool",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "bulk-actions-approval",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "cadastro-colaborador-apenas-um-identificador",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "candidate-passwordless-signin",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "candidate-sms-code-signin",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "career-hub.onboarding",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "clima-engajamento.gupy-footer",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "communication-config-job-recommendation-setup",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "contents-audit",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "convert_job_quick_apply",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": true
+        },
+        {
+          "name": "create-new-accounts-in-central-accounts",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "description-errors-job-insights",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "disable-admin-company-infos",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "disable-legacy-admin-v1",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "district-filter",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "duplicate-and-create-template-quick-apply-job",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "duplicate-job-permission",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "educational-organizations-and-courses-new-ux",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "educorp.guided-onboarding-user-guiding",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-applications-boolean-search",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-average-repetition-in-analysis-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-certificate-menu-new-tag",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-clarity-on-rs",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-company-multiple-certificates-template-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-contents-workload",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-course-widget-in-analysis-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-engagement-admin-analytics",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-grade-admin-analytics",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-new-filters-admin-analytics",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-pathways-admin-analytics",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-pathways-completeness-admin-analytics",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-report-by-employee-with-contents",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-unaccent-search-employee",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-usage-history",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-workload-admin-analytics",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enabled-worksheet-report-by-pathways",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-employee-monitoring-menu-new-tag",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-employee-monitoring-report",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-employees-api-webhook",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-employee-status-filter-in-analysis-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-group-filter-in-analysis-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-hours-and-days-widget-in-analysis-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-individual-certificate-view",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-job-positions",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-lowest-scoring-lessons-widget-in-analysis-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-manager-usage-report-access",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-mass-certificates",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-most-repeated-lessons-widget-in-analysis-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-new-course-workload",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-new-default-certificate",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-new-pathway-workload",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-pathways-indicators-filter-by-status",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-ranking-widget-in-analysis-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-recaptcha-educorp-signin-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-recaptcha-password-recovery",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-survicate-on-rs",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-talent-pool-gupy",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-talents-exact-count",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "enable-update-account-identifiers",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "external-assessment",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "fetch-bonus-from-consolidated-table",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "filter_options_for_educational_institution",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "footer-show-release-link",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "force-send-performance-review",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "generate-async-pulse-report",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "guided-onboarding-user-guiding",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "gupy-navegacao-ecossistema",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "gupy-recruiter.ats-authentication",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "header-edc-eco-release-1",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "header-edc-eco-release-2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "hide-pending-approvers-csv-report",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-board-career-jet",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-board-carreira-fashion",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-board-remotar",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-boards-rollout",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-board-yduqs",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-language-requirement",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-management-insights",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-management-redesign",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "jobs-quick-apply-required-fields",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-step-question-form-redesign",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-table-redesign",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "job-visibility-settings",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "legacy-audit",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "linkedin-rsc-inmail-sync",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "linkedin-rsc-sync-agg-entities-new-queue",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "linkedin-rsc-sync-schedule",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "linkedin-rsc-sync-skip-candidates-fetch-timeouts",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "login-sso-by-nin",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "manage-acceptance-terms",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "migracao-postgres-eventos",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "move_to_step_type_is_all",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "new_dialog_feedback_badge",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "new-heatmap",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "new-participants-content-report",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "new-survey-duplication",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "partners_content_menu",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "partners_content_menu_new_tag",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "pathways-audit",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "pathways-query-performance",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "pd-send-email-cron-kill-switch",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "performance-model-scales",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "performance-profile-permission",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "psychosocial-risks-report-iniciative",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "quick-apply",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "quick-apply-show-intro-dialog",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "rebranding-portal",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "refactor-course-list",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "refactor-pathways-indicators",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "send-to-linkedin-queue-redirection",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "show-bulk-add-tags-button",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "show-bulk-assign-to-other-job-button",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "show-bulk-send-email-button",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "show-languages-filter",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "show-mass-reject-button",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "show-professional-experience-filter",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "show-referral-filter",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "show-talent-portal-banner",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "sidebar-edc-eco-release-1",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "smart-vagas-ai-question-guidelines",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "smart-vagas-lang-english",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "smart-vagas-move-by-score",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "sms-password-recovery",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "tab-talent-pool",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "talent-pool-job-hide-details",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "template-quick-apply",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-analytics.home-jobs-close-to-expire",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.cancel-enrollment-for-blocked-users",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.csat-survey-collaborator",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.digest-compliance-email-weekly",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.download-ranking-image",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.enable-redesign-header-pathway-details",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.high-pathway-bonus-delay",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.optimized-pathways-list",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.preview-pathway-content",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.reset-by-composite-data",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.reset-by-rg",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.simplified-course-deletion",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.standard-gupy-theme-in-pathways",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.usage-report-filter-by-start-date",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem-validate-attempts",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-aprendizagem.verify-pathway-checkpoint",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-atratividade.career-page-colors-theme",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-atratividade.career-page-sections",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.block-login-email-unconfirmed",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.communication-rebranding",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.companies-legacy-authentication-rebranding",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.disable-candidate-signin-recaptcha",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.disable-candidate-signup-recaptcha",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.disable-login-with-facebook",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.disable-permissions-hot-reload",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.enable-candidates-new-reset-password-area",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.enable-central-company-integration",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.save-candidate-token-in-redis",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-autenticacao.single-sign-on-niduu",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-candidatos.portal-redesign",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-captacao.job-board",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-captacao.linkedin-rsc-delete-child-app",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-captacao.rsc",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.can-request-pathway-rest-api",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador-educorp.enable-compression-body",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.enable-mailgun-to-email-verification",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.enable-web-datadog-monitoring",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.exclude-user-sensitive-data",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.experimental-web-sound-enable",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.generate-authenticated-scorm-url",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.get-account-v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.home-content-feed",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.indicator-area-redesign",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.indicators-new-feed-sections",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.noticacao-automatica-pathways",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.pathway-passing-score",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.pathway-progress-v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.remove-explorer-and-profile",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.remove-finished-content-from-home",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.remove-nps-in-app",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.required-birthdate",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.required-nin",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.scorm-proxy-auth",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.shortcut-next-pathway-item",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.show-pathways-by-tabs",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.smartlook_enabled",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.survicate_enabled",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.training-area-redesign",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.use-company-color-in-pathway",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-colaborador.user-data-deletion-request",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-comunicacao.email-template-tabs-enabled",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-comunicacao.notification-uns-enabled",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.admin-analytics",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.admin-analytics-tmp",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.ai_course_tracking",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.ai_creator_plan",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.central-de-empresas",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.consolidar-bonus-campanha",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.creator-course-with-ai",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.creator-course-with-pdf-and-ai",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.creator-enable-v2-ai-plan-usage-for-creators",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.enable_admin_permission_check",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.ia-plan-infobox",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.materials",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.materials_batchDelete",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.new-scrape-url",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.pathway-throttler",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo-educorp.visualizar-bonus-campanha-consolidado",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo.materials-on-pathways",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-conteudo.partners-on-pathways",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-contratacao.engage-surveys",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-contratacao.new-home",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-contratacao.show-relative-position",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-contratacao.show_tests_history",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-contratacao.skills-evaluation",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-contratacao.timeline-signed-upload-to-s3",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-contratacao.toggle-address-filter",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.curriculum-personalization-step",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.new-application-experience",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.new-header-menu-icon",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.new-parser",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.optional-field-how-did-you-hear-about-us",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.parser-enabled",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.quick-apply-custom-questions",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.quick-apply-fill-userdata",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.quick-apply-upload-form",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.request-birth-date",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.show-curriculum-in-guided-application",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.skills-for-company",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.skills-highlight",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.sms-passwordless-signin",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.sms-passwordless-signin-highlight",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.unifying-curriculum",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-curriculo.update-profile-dialog",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-divulgacao.apply-to-talent-pool",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-divulgacao.portal-beamer",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-divulgacao.show-talent-pool-tip",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-empregabilidade.try-out-flag",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-empregabilidade.view-job-search-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-estrutura-organizacional.operation-unit",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-estrutura-organizacional.spreadsheet-upload",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.admin-async-collaborators-validation",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.admin-explicit-import-rules",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.admin-fix-spreadsheet-import-performance",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.admin-permissions-auth-api",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.admin-remove-collaborators-email",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.admin-save-central-account-id",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.admin-unified-spreadsheet-sync-flow",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.creator-duplicate-course",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.creator-permissions-auth-api",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.creator-update-course-in-pathway",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.filter-by-finished-at",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.pathways-update-enrollment-status",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.reset-password-full-rg",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-gestao-educorp.show-user-ip-on-report",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-inbound.enable-dynamic-lists-only",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-inbound.image-upload-email",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-inbound.manage-talent-portal",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-inbound.opt-in-talent-portal",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-inbound.reprocess-recommendation-cards",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-inbound.show-talent-portal-badge",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-insighters-ce.correlation_optimized_method",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-insighters-ce.feedback-batch-reply-suggestion",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-insighters-ce.feedback-reply-templates",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-insighters-ce.new-feedbacks-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-insighters-ce.survey-results-benchmark",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-insighters-ce.survey-results-cycle-filter",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-insighters-ce.survey-results-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-insighters-ce.theme-structure-page",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.add-client-import-person",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.allow-nr1-instrument",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.block-deactivate-modules-webhook",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.discrete-scale-mi",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.enable-company-central-create-webhook",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.enable-company-central-delete-webhook",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.enable-company-central-update-webhook",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.export-report-with-minimum-respondents",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": true
+        },
+        {
+          "name": "time-jornada-admin-ce.new-flow-to-get-employees",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.new-flow-to-get-send-groups",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.upload-employees-batch-accounts",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.use-hierarchy-history-on-score",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-jornada-admin-ce.validate-filter-feedback",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lms.edit-pathway-flow-v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lms.events-v1",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lms.notifications",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lms.pathway-diploma",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lms.pathway-notification-when-actived",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lms.pathways-v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.admin.change-app-logo",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.explore-skills-map",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.explore-v1",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.materials",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.materials-cards",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.materials-cards-legacy",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.materials-pdf",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.materials-scorm",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.my-history-v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.new-admin-products",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-lxp.report-scorm",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-movimentacao.additional-questions",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-movimentacao.atribuicao-em-massa",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-movimentacao.block-automatic-move-for-warning-steps",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-movimentacao.internal-screening-job-step",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-movimentacao.public-api-candidates-history-mock",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-movimentacao.skills-taxonomy",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-ncc-deduplication-candidates-reindex",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-ncc-send-applications-in-batch-to-calculate-score",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.archive-goals-v1",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.archive-goals-v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.assessment-cant-evaluate-and-allow-blank-answer",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.assessment-experience",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-beta.assessments-cycle-management-v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.enable_ignore_no_response_on_review_plan",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.experience-big-numbers",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.experience-filters",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.experienece_assessment_menu",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.footer-releases-new-link",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-goals.ai-agent-button",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-goals.allows-transition-approved-and-in-progress-to-review",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-goals.progress-history-export",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.gupy-footer",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.hide_comments_in_performance_review",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.in-cycle-assessment-informative-components",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.in-cycle-assessment-journey",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-metas.module-goals",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.move-assessments-results-to-cycle",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance.new-experience-assessment-v1",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-pd.assessments-cycle-management-details-v1",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-pd.assessments-cycle-management-v3",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-pd.okr",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-pd.relationship-network-assertiveness",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-pd.relationship-network-assertiveness-v2",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-pd.relationship-network-assertiveness-v3",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-performance-pd.scale-percentage",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-pesquisas-ce.deepening-question",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-pesquisas-ce.new-survey-screen",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-pesquisas-ce.survey-attributes-list",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-pesquisas-ce.survey-recurrence-config",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-pesquisas-ce.survey-share-results",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-pesquisas-ce.unit-geography-crossing",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-pesquisas-flexiveis.send-slack-notification-pubsub",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-pesquisas-flexiveis.slack-request-validation",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-prisma.enable-likert-scale",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-prisma.hide-template-details",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.automatic-move-individually-by-step",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.check-role-department-in-use-by-assessments",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.create-job-step-list-summary",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.cultural-fit-mapping",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.cultural-fit-mapping-reports",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.custom-test-random-questions",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.english-test",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.ignore-curriculum-legacy-profile-flag",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.mathematics-test",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time.qualificacao.numerical-reasoning-test-complete",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time.qualificacao.numerical-reasoning-test-essential",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.permission-evaluate-custom-test",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.portuguese-test",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.reuse-video-interview",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.show-disabled-fit-cultural",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.show-disable-profile-test-deadline-warning",
+          "enabled": true,
+          "variant": {
+            "name": "deadlineGroup1",
+            "payload": {
+              "type": "string",
+              "value": "2024-06-24"
+            },
+            "enabled": true
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.verbal-reasoning-test-complete",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.verbal-reasoning-test-essential",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-qualificacao.video-interview-new-experience",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.add-marker-on-engage-survey-setup",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.annotation-on-evaluate",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.disable-ranking",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.enable-ordering-applications-by-name",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.enable-skills-i18n",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": true
+        },
+        {
+          "name": "time-triagem.engage-survey-link-on-feedback-modal",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.filter-age-range",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.generate-pdf-offer-letter",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.kafka-enabled",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.new-applications-ordering-dropdown",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.new-skill-base",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-triagem.send-to-admission-button-alternative-link",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-vagas.disable-mock-get-jobs",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-vagas.gaia-write-job",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-vagas.manage-jobs-visibility",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "time-vagas.republish-job",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "treinamento.support-chatbot",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "usage-report-filter-by-enrollment-date",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "usage-report-include-blocked-employees",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "use-post-fetch-applications",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "value-per-page-tables-admin-analytics",
+          "enabled": true,
+          "variant": {
+            "name": "value-per-page",
+            "payload": {
+              "type": "string",
+              "value": "1000"
+            },
+            "enabled": true
+          },
+          "impressionData": false
+        },
+        {
+          "name": "webhook_admission_integration_trigger",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        },
+        {
+          "name": "whatsapp-message-to-test-on-prod",
+          "enabled": true,
+          "variant": {
+            "name": "disabled",
+            "enabled": false
+          },
+          "impressionData": false
+        }
+      ],
+      "userId": "",
+      "_nextI18Next": {
+        "initialI18nStore": {
+          "pt": {
+            "common": {
+              "heading": "Encontre um novo emprego",
+              "paragraph": "Procure dentre milhares de oportunidades nas empresas que usam a Gupy para contratar mais e melhor."
+            },
+            "header": {
+              "resultIndicator": "vagas encontradas",
+              "inputSearch": {
+                "placeholder": "Busque por nome da vaga",
+                "label": "Busque por nome da vaga",
+                "buttonLabel": "Pesquisar vagas"
+              },
+              "gupyLogo": "Gupy Acesse a p\u00e1gina inicial do Portal de vagas da Gupy",
+              "menuAvatar": {
+                "avatarAriaLabel": {
+                  "loggedOut": "Usu\u00e1rio deslogado Abrir menu de usu\u00e1rio",
+                  "loggedIn": "{{name}} Abrir menu de usu\u00e1rio"
+                },
+                "login": "Entrar",
+                "loginLabel": "Acesso a \u00e1rea logada",
+                "editProfile": "Editar perfil",
+                "myAccount": "Minha conta",
+                "myCurriculum": "Meu curr\u00edculo",
+                "myApplications": "Minhas candidaturas",
+                "companiesAppliedListGroup": "Lista de empresas que me candidatei",
+                "candidateSupport": "Suporte ao candidato",
+                "termsAndConditions": "Termos de Uso da Gupy",
+                "privacyPolicy": "Aviso de Privacidade da Gupy",
+                "logout": "Sair",
+                "companiesApplied": "Empresas que me candidatei",
+                "goBackToMainMenu": "Voltar ao menu principal",
+                "about": "Sobre",
+                "messages": "Mensagens",
+                "closeButtonAriaLabel": "Fechar menu",
+                "mentorship": "Mentorias",
+                "interviewSimulator": "Simulador de Entrevistas",
+                "bannerPortal": {
+                  "altImage": "Imagem representando acesso ao portal de vagas",
+                  "heading": "Encontre novas vagas",
+                  "textContent": "Acesse o nosso portal para encontrar uma nova oportunidade.",
+                  "accessPortalButton": "Acessar portal"
+                }
+              }
+            },
+            "hero": {
+              "title": "Encontre vagas de emprego",
+              "titleWithFilters": "Vagas de {{searchTerm}}{{workplaceTypes}}{{location}} | Encontre oportunidades",
+              "employment": " emprego",
+              "in": "em",
+              "remote": "Home Office",
+              "hybrid": "H\u00edbrido",
+              "onSite": "Presencial",
+              "titleWithCompany": "Trabalhe na Empresa {{company}} - Vagas Abertas",
+              "metaDescription": "Buscando por vagas de {{searchTerm}}{{workplaceTypes}}{{location}}? Explore oportunidades de carreira e crescimento profissional. Acesse agora!",
+              "metaDescriptionCompany": "Encontre a oportunidade ideal na empresa {{company}} pelo portal Gupy. Confira as vagas dispon\u00edveis e envie seu curr\u00edculo online.",
+              "description": "Confira gratuitamente as oportunidades de empregos nas empresas clientes da Gupy.",
+              "rebranding": {
+                "title": "Encontre a sua vaga de emprego",
+                "imageAlt": "Mulher sorridente com camisa de bolinhas e blazer laranja, cercada por c\u00edrculos coloridos com \u00edcones representando documentos, configura\u00e7\u00f5es, pasta, gr\u00e1fico e perfil de usu\u00e1rio.."
+              }
+            },
+            "hiring-counter": {
+              "hiringLabel": "contrata\u00e7\u00f5es realizadas pelas empresas utilizando ",
+              "GupyATS": "Gupy Recrutamento & Sele\u00e7\u00e3o.",
+              "updatedAt": "Atualizado em {{date}} \u00e0s {{time}}"
+            },
+            "institutional": {
+              "careerJourney": "A carreira \u00e9 sua. Mas a jornada a gente faz junto",
+              "discoverJobs": "Encontre vagas reais e se conecte com empresas que valorizam o seu potencial",
+              "jobsPostedNumber": "92",
+              "thousand": "mil",
+              "jobsPosted": "vagas publicadas",
+              "opportunitiesAligned": "Oportunidades alinhadas ao seu perfil em todo o Brasil.",
+              "two": "2",
+              "companiesHiring": "empresas recrutando pela Gupy",
+              "bigAndLocalBusinesses": "De grandes marcas a neg\u00f3cios locais, seu pr\u00f3ximo passo est\u00e1 aqui.",
+              "million": "milh\u00f5es",
+              "peopleHired": "de pessoas contratadas",
+              "join": "Junte-se a quem j\u00e1 conquistou uma nova oportunidade com a nossa ajuda.",
+              "recruitersRadar": "Fique no radar de quem contrata",
+              "signUpTalentPool": "Cadastre-se no Banco de Talentos e seja uma pessoa vista por empresas que est\u00e3o buscando profissionais como voc\u00ea.",
+              "participateTalentPoolBtn": "Participar do Banco de Talentos"
+            },
+            "potential-boost": {
+              "title": "Impulsione seu potencial",
+              "classTabLabel": "Curso",
+              "contentTabLabel": "Conte\u00fado",
+              "classTabAriaLabel": "Impulsione seu potencial, curso, lista de 14 itens",
+              "contentTabAriaLabel": "Impulsione seu potencial, conte\u00fado, lista de 4 itens",
+              "classCtaButtonText": "Assistir",
+              "contentCtaButtonText": "Acessar",
+              "items": {
+                "classes": [
+                  {
+                    "title": "Aula 1",
+                    "description": "O que \u00e9 a Gupy e como funciona a plataforma de Recrutamento & Sele\u00e7\u00e3o",
+                    "img": "/images/course/{{language}}/1.jpg",
+                    "href": "https://www.youtube.com/watch?v=MoE7Tr33BUY&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 2",
+                    "description": "Como a Intelig\u00eancia Artificial est\u00e1 transformando o Recrutamento & Sele\u00e7\u00e3o",
+                    "img": "/images/course/{{language}}/2.jpg",
+                    "href": "https://www.youtube.com/watch?v=XKzxxtBoF3g&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 3",
+                    "description": "A diferen\u00e7a entre a Gupy e os portais de emprego",
+                    "img": "/images/course/{{language}}/3.jpg",
+                    "href": "https://www.youtube.com/watch?v=pMszLwO8aFI&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 4",
+                    "description": "A evolu\u00e7\u00e3o do processo seletivo na vis\u00e3o da pessoa recrutadora",
+                    "img": "/images/course/{{language}}/4.jpg",
+                    "href": "https://www.youtube.com/watch?v=aSb13H1iGdg&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 5",
+                    "description": "Como se cadastrar na Gupy, criar CV e participar dos processos seletivos das empresas",
+                    "img": "/images/course/{{language}}/5.jpg",
+                    "href": "https://www.youtube.com/watch?v=OJzP2EHqUno&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 6",
+                    "description": "Como identificar as vagas mais adequadas para o seu curr\u00edculo",
+                    "img": "/images/course/{{language}}/6.jpg",
+                    "href": "https://www.youtube.com/watch?v=V5PD1ZZ2K0I&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 7",
+                    "description": "Dicas para o seu curr\u00edculo na plataforma Gupy Recrutamento & Sele\u00e7\u00e3o",
+                    "img": "/images/course/{{language}}/7.jpg",
+                    "href": "https://www.youtube.com/watch?v=mavj7wziVBU&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 8",
+                    "description": "Melhores pr\u00e1ticas para descrever suas habilidades e experi\u00eancias no CV",
+                    "img": "/images/course/{{language}}/8.jpg",
+                    "href": "https://www.youtube.com/watch?v=_Lo0_ErxMO4&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 9",
+                    "description": "Como destacar suas conquistas e resultados no curr\u00edculo",
+                    "img": "/images/course/{{language}}/9.jpg",
+                    "href": "https://www.youtube.com/watch?v=2J-vN5oDdy8&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 10",
+                    "description": "Como a Intelig\u00eancia Artificial (e as pessoas) entendem suas experi\u00eancias",
+                    "img": "/images/course/{{language}}/10.jpg",
+                    "href": "https://www.youtube.com/watch?v=dLHMcpI-owo&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 11",
+                    "description": "Exemplificando a leitura do curr\u00edculo pela Intelig\u00eancia Artificial",
+                    "img": "/images/course/{{language}}/11.jpg",
+                    "href": "https://www.youtube.com/watch?v=0vOyzDH6IT4&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 12",
+                    "description": "Uso respons\u00e1vel da Intelig\u00eancia Artificial em Recrutamento",
+                    "img": "/images/course/{{language}}/12.jpg",
+                    "href": "https://www.youtube.com/watch?v=PH69QexUTlk&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 13",
+                    "description": "Como a Gupy promove o uso respons\u00e1vel da Intelig\u00eancia Artificial",
+                    "img": "/images/course/{{language}}/13.jpg",
+                    "href": "https://www.youtube.com/watch?v=10C0xFjSKi0&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 14",
+                    "description": "Mensagem para pessoas candidatas da cofundadora e CEO da Gupy, Mariana Dias",
+                    "img": "/images/course/{{language}}/14.jpg",
+                    "href": "https://www.youtube.com/watch?v=RSHcaLfGORk&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  }
+                ],
+                "contents": [
+                  {
+                    "title": "Dicas sobre preenchimento de curr\u00edculo",
+                    "description": "Leia diversos conte\u00fados sobre o assunto",
+                    "img": "/images/contents/{{language}}/1.jpg",
+                    "href": "https://pravoce.gupy.io/pt?category=curr%C3%ADculo&role=s_QKIrThDW7923%3Bs_vbDskKHs15288%3Bs_iWtQKQeI15046%3Bs_icuLmVfh15597"
+                  },
+                  {
+                    "title": "Novidades e melhorias",
+                    "description": "O que foi feito para voc\u00ea ter uma melhor experi\u00eancia de candidatura",
+                    "img": "/images/contents/{{language}}/2.jpg",
+                    "href": "https://pravoce.gupy.io/pt?category=improvement&role=s_QKIrThDW7923%3Bs_vbDskKHs15288%3Bs_iWtQKQeI15046%3Bs_icuLmVfh15597"
+                  },
+                  {
+                    "title": "Transpar\u00eancia sobre a Intelig\u00eancia Artificial",
+                    "description": "Informa\u00e7\u00f5es sobre funcionamento da nossa IA, feita de gente pra gente",
+                    "img": "/images/contents/{{language}}/3.jpg",
+                    "href": "https://pravoce.gupy.io/pt?category=intelig%C3%AAncia+artificial&role=s_QKIrThDW7923%3Bs_vbDskKHs15288%3Bs_iWtQKQeI15046%3Bs_icuLmVfh15597"
+                  },
+                  {
+                    "title": "Como incentivamos o envio de feedback",
+                    "description": "Saiba mais informa\u00e7\u00f5es sobre a etapa de retorno que deve ser feita pela empresas",
+                    "img": "/images/contents/{{language}}/4.jpg",
+                    "href": "https://pravoce.gupy.io/pt?category=feedback&role=s_QKIrThDW7923%3Bs_vbDskKHs15288%3Bs_iWtQKQeI15046%3Bs_icuLmVfh15597"
+                  }
+                ]
+              }
+            },
+            "potential-boost-redesign": {
+              "title": "Impulsione sua carreira com a Gupy",
+              "subtitle": "A gente conecta voc\u00ea com oportunidades de verdade. Porque sua trajet\u00f3ria merece protagonismo.",
+              "classTabLabel": "Curso",
+              "contentTabLabel": "Conte\u00fado",
+              "classTabAriaLabel": "Impulsione seu potencial, curso, lista de 14 itens",
+              "contentTabAriaLabel": "Impulsione seu potencial, conte\u00fado, lista de 4 itens",
+              "classCtaButtonText": "Assistir",
+              "contentCtaButtonText": "Acessar",
+              "items": {
+                "classes": [
+                  {
+                    "title": "Aula 1",
+                    "description": "O que \u00e9 a Gupy e como funciona a plataforma de Recrutamento & Sele\u00e7\u00e3o",
+                    "img": "/images/course/pt/redesign/1.png",
+                    "href": "https://www.youtube.com/watch?v=MoE7Tr33BUY&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 2",
+                    "description": "Como a Intelig\u00eancia Artificial est\u00e1 transformando o Recrutamento & Sele\u00e7\u00e3o",
+                    "img": "/images/course/pt/redesign/2.png",
+                    "href": "https://www.youtube.com/watch?v=XKzxxtBoF3g&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 3",
+                    "description": "A diferen\u00e7a entre a Gupy e os portais de emprego",
+                    "img": "/images/course/pt/redesign/3.png",
+                    "href": "https://www.youtube.com/watch?v=pMszLwO8aFI&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 4",
+                    "description": "A evolu\u00e7\u00e3o do processo seletivo na vis\u00e3o da pessoa recrutadora",
+                    "img": "/images/course/pt/redesign/4.png",
+                    "href": "https://www.youtube.com/watch?v=aSb13H1iGdg&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 5",
+                    "description": "Como se cadastrar na Gupy, criar CV e participar dos processos seletivos das empresas",
+                    "img": "/images/course/pt/redesign/5.png",
+                    "href": "https://www.youtube.com/watch?v=OJzP2EHqUno&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 6",
+                    "description": "Como identificar as vagas mais adequadas para o seu curr\u00edculo",
+                    "img": "/images/course/pt/redesign/6.png",
+                    "href": "https://www.youtube.com/watch?v=V5PD1ZZ2K0I&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 7",
+                    "description": "Dicas para o seu curr\u00edculo na plataforma Gupy Recrutamento & Sele\u00e7\u00e3o",
+                    "img": "/images/course/pt/redesign/7.png",
+                    "href": "https://www.youtube.com/watch?v=mavj7wziVBU&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 8",
+                    "description": "Melhores pr\u00e1ticas para descrever suas habilidades e experi\u00eancias no CV",
+                    "img": "/images/course/pt/redesign/8.png",
+                    "href": "https://www.youtube.com/watch?v=_Lo0_ErxMO4&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 9",
+                    "description": "Como destacar suas conquistas e resultados no curr\u00edculo",
+                    "img": "/images/course/pt/redesign/9.png",
+                    "href": "https://www.youtube.com/watch?v=2J-vN5oDdy8&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 10",
+                    "description": "Como a Intelig\u00eancia Artificial (e as pessoas) entendem suas experi\u00eancias",
+                    "img": "/images/course/pt/redesign/10.png",
+                    "href": "https://www.youtube.com/watch?v=dLHMcpI-owo&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 11",
+                    "description": "Exemplificando a leitura do curr\u00edculo pela Intelig\u00eancia Artificial",
+                    "img": "/images/course/pt/redesign/11.png",
+                    "href": "https://www.youtube.com/watch?v=0vOyzDH6IT4&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 12",
+                    "description": "Uso respons\u00e1vel da Intelig\u00eancia Artificial em Recrutamento",
+                    "img": "/images/course/pt/redesign/12.png",
+                    "href": "https://www.youtube.com/watch?v=PH69QexUTlk&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 13",
+                    "description": "Como a Gupy promove o uso respons\u00e1vel da Intelig\u00eancia Artificial",
+                    "img": "/images/course/pt/redesign/13.png",
+                    "href": "https://www.youtube.com/watch?v=10C0xFjSKi0&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  },
+                  {
+                    "title": "Aula 14",
+                    "description": "Mensagem para pessoas candidatas da cofundadora e CEO da Gupy, Mariana Dias",
+                    "img": "/images/course/pt/redesign/14.png",
+                    "href": "https://www.youtube.com/watch?v=RSHcaLfGORk&list=PLgLXOZ_NVJpHNBeWe9Bd1vEBRfRK4M3Ms"
+                  }
+                ],
+                "contents": [
+                  {
+                    "title": "Dicas sobre preenchimento de curr\u00edculo",
+                    "description": "Leia diversos conte\u00fados sobre o assunto",
+                    "img": "/images/contents/{{language}}/1.jpg",
+                    "href": "https://pravoce.gupy.io/pt?category=curr%C3%ADculo&role=s_QKIrThDW7923%3Bs_vbDskKHs15288%3Bs_iWtQKQeI15046%3Bs_icuLmVfh15597"
+                  },
+                  {
+                    "title": "Novidades e melhorias",
+                    "description": "O que foi feito para voc\u00ea ter uma melhor experi\u00eancia de candidatura",
+                    "img": "/images/contents/{{language}}/2.jpg",
+                    "href": "https://pravoce.gupy.io/pt?category=improvement&role=s_QKIrThDW7923%3Bs_vbDskKHs15288%3Bs_iWtQKQeI15046%3Bs_icuLmVfh15597"
+                  },
+                  {
+                    "title": "Transpar\u00eancia sobre a Intelig\u00eancia Artificial",
+                    "description": "Informa\u00e7\u00f5es sobre funcionamento da nossa IA, feita de gente pra gente",
+                    "img": "/images/contents/{{language}}/3.jpg",
+                    "href": "https://pravoce.gupy.io/pt?category=intelig%C3%AAncia+artificial&role=s_QKIrThDW7923%3Bs_vbDskKHs15288%3Bs_iWtQKQeI15046%3Bs_icuLmVfh15597"
+                  },
+                  {
+                    "title": "Como incentivamos o envio de feedback",
+                    "description": "Saiba mais informa\u00e7\u00f5es sobre a etapa de retorno que deve ser feita pela empresas",
+                    "img": "/images/contents/{{language}}/4.jpg",
+                    "href": "https://pravoce.gupy.io/pt?category=feedback&role=s_QKIrThDW7923%3Bs_vbDskKHs15288%3Bs_iWtQKQeI15046%3Bs_icuLmVfh15597"
+                  }
+                ]
+              }
+            },
+            "section-icon": {
+              "alt": "Icone da se\u00e7\u00e3o"
+            },
+            "header-snap": {},
+            "footer": {
+              "aboutUs": "Sobre n\u00f3s",
+              "aboutGupy": "O que \u00e9 a Gupy",
+              "aboutThePlatform": "Sobre a plataforma",
+              "candidates": "Login em minhas vagas",
+              "candidatesSupport": "Suporte \u00e0 pessoa candidata",
+              "copyRight": "\u00a92015-{{currentYear}} Gupy. Todos os direitos reservados.",
+              "privacy": "Pol\u00edtica de privacidade",
+              "terms": "Termos de uso",
+              "footerGupyLogo": "Logotipo da Gupy no rodap\u00e9",
+              "forCandidates": "Para pessoas candidatas",
+              "gupyIa": "Entenda a Gupy IA",
+              "feedback": "Selo de Feedback",
+              "news": "Novidades",
+              "helpCenter": "Central de Ajuda",
+              "talkToSupport": "Falar com o Suporte",
+              "socialMedias": "Redes sociais",
+              "gupyIaVoiceOver": "Entenda a Intelig\u00eancia Artificial da Gupy",
+              "url": "https://suporte-candidatos.gupy.io/s/"
+            },
+            "recent-search": {
+              "title": "Pesquisas recentes",
+              "ariaLabelLink": "Buscar por",
+              "rebranding": {
+                "itemsLabel": "Buscas recentes:"
+              }
+            },
+            "job": {
+              "title": {
+                "jobs": "Vagas",
+                "results": "resultados",
+                "empty-result": "Sem resultados"
+              },
+              "empty-state": {
+                "heading": "Ops! Nenhuma vaga foi encontrada...",
+                "tipsParagraph": "Dicas para melhorar sua busca:",
+                "abbreviationParagraph": "Evite usar abrevia\u00e7\u00f5es;",
+                "correctWordsParagraph": "Confira se as palavras est\u00e3o escritas corretamente;",
+                "termsParagraph": "Tente termos mais gen\u00e9ricos ou retire os filtros de sua busca."
+              },
+              "jobCard": {
+                "resume": "Ir para vaga {{name}} da empresa {{careerPageName}} na cidade {{city}} publicada {{publishedDate}}. Essa vaga \u00e9 do tipo {{type}}.",
+                "resumeTalentPool": "Ir para vaga {{name}} da empresa {{careerPageName}} publicada {{publishedDate}}. Essa vaga \u00e9 do tipo {{type}}.",
+                "badge": "Esta empresa tem alta taxa de feedback",
+                "jobPublicationDate": "Publicada em",
+                "talentPool": "Banco de Talentos",
+                "quickApply": "Essa \u00e9 uma vaga de candidatura r\u00e1pida"
+              },
+              "pagination": {
+                "previous": "P\u00e1gina anterior",
+                "next": "Pr\u00f3xima p\u00e1gina",
+                "page": "P\u00e1gina {{page}}"
+              }
+            },
+            "job-search-input": {},
+            "keep-me-up-to-date": {
+              "title": "Conte\u00fados pra voc\u00ea",
+              "horizontalList": {
+                "ariaLabel": "Artigos do Blog do Emprego"
+              },
+              "listItem": {
+                "prefixAriaLabel": "Ir para"
+              },
+              "seeMore": {
+                "content": "Ver mais",
+                "ariaLabel": "Ir para Blog do Emprego para acessar outros artigos"
+              }
+            },
+            "recent-job-listing": {
+              "title": "Voc\u00ea buscou recentemente",
+              "subtitle": "Oportunidades de acordo com o seu hist\u00f3rico de buscas:",
+              "horizontalList": {
+                "ariaLabel": "Sugest\u00f5es de vagas de emprego"
+              }
+            },
+            "recent-job-listing-rebranding": {
+              "title": "Sugest\u00f5es de vagas",
+              "subtitle": "Vagas similares \u00e0s que voc\u00ea visualizou recentemente:",
+              "horizontalList": {
+                "ariaLabel": "Lista de 4 itens"
+              }
+            },
+            "search-combobox": {
+              "placeholder": "Busque por nome da vaga",
+              "label": "Busque por nome da vaga",
+              "buttonAriaLabel": "Buscar vaga",
+              "inputAriaLabel": "Digite um cargo",
+              "backButtonAriaLabel": "Fechar o menu lateral",
+              "rebranding": {
+                "placeHolder": "Digite um cargo",
+                "label": "Digite o cargo, \u00e1rea ou empresa"
+              }
+            },
+            "friendly-badge": {
+              "message": "Empresas com alta taxa de retorno e atividade nas vagas nos \u00faltimos 3 meses",
+              "infotipAreaLabel": "Esta empresa possui Selo de Feedback"
+            },
+            "companies-with-friendly-badge": {
+              "title": "Empresas com Selo de Feedback",
+              "infotip": "Empresas com alta taxa de retorno e atividade nas vagas nos \u00faltimos 3 meses",
+              "infotipAreaLabel": "Informa\u00e7\u00e3o",
+              "companyItem": {
+                "ariaLabelPrefix": "Ir para p\u00e1gina de vagas da empresa",
+                "imgAltPrefix": "Logo da empresa"
+              }
+            },
+            "results-not-found": {
+              "heading": "Nenhum resultado foi encontrado",
+              "tipsParagraph": "Dicas para melhorar a sua busca:",
+              "abbreviationParagraph": "Evite usar abrevia\u00e7\u00f5es;",
+              "correctWordsParagraph": "Confira se as palavras est\u00e3o escritas corretamente;",
+              "termsParagraph": "Tente termos mais gen\u00e9ricos ou retire os filtros de sua busca. "
+            },
+            "search-result-total": {
+              "company_one": "empresa",
+              "company_other": "empresas",
+              "vacancy_one": "vaga",
+              "vacancy_other": "vagas",
+              "found_one": "encontrada",
+              "found_other": "encontradas",
+              "and": "e"
+            },
+            "fieldset-vacancy-data": {
+              "legend": "Dados da Vaga",
+              "noOptionsText": "Tente outra palavra-chave",
+              "jobTypes": {
+                "label": "Tipo de Vaga",
+                "inputLabel": "Buscar pelos tipos de vaga",
+                "ariaLabel": "Tipo de Vaga",
+                "placeholder": "Selecione",
+                "selectPlaceholder": "Selecione pelo tipo de vaga"
+              },
+              "company": {
+                "label": "Empresa",
+                "inputLabel": "Buscar por empresa",
+                "ariaLabel": "Empresa",
+                "placeholder": "Selecione ou digite",
+                "selectPlaceholder": "Selecione ou digite o nome da empresa"
+              }
+            },
+            "job-type": {
+              "vacancy_type_apprentice": "Aprendiz",
+              "vacancy_type_associate": "Associado",
+              "vacancy_type_talent_pool": "Banco de Talentos",
+              "vacancy_type_effective": "Efetivo",
+              "vacancy_type_internship": "Est\u00e1gio",
+              "vacancy_type_summer": "Summer job",
+              "vacancy_type_temporary": "Tempor\u00e1rio",
+              "vacancy_type_outsource": "Terceiro",
+              "vacancy_type_trainee": "Trainee",
+              "vacancy_type_volunteer": "Volunt\u00e1rio",
+              "vacancy_legal_entity": "Pessoa Jur\u00eddica",
+              "vacancy_type_parter": "S\u00f3cio",
+              "vacancy_type_lecturer": "Docente",
+              "vacancy_type_freelancer": "Freelancer",
+              "vacancy_type_autonomous": "Aut\u00f4nomo",
+              "vacancy_type_intermittent": "Intermitente"
+            },
+            "fieldset-location": {
+              "legend": "Local de trabalho",
+              "noOptionsText": "Tente outra palavra-chave",
+              "state": {
+                "label": "Estado",
+                "ariaLabel": "Selecione o Estado",
+                "placeholder": "Selecione ou digite"
+              },
+              "city": {
+                "label": "Cidade",
+                "ariaLabel": "Selecione a Cidade",
+                "placeholder": "Selecione ou digite"
+              }
+            },
+            "search-filter-dialog": {
+              "ariaLabel": "Acessar filtros para a busca de vagas e empresas",
+              "text": "Filtrar resultado",
+              "dialog": {
+                "title": "Filtrar",
+                "primaryButton": {
+                  "text": "Aplicar filtros"
+                },
+                "secondaryButton": {
+                  "text": "Limpar filtros"
+                }
+              }
+            },
+            "search-filter-sidebar": {
+              "text": "Filtrar",
+              "applyFilters": "Aplicar filtros",
+              "cleanFilters": "Limpar filtros",
+              "skipBlockLink": "Ir para resultados",
+              "landmarkAriaLabel": "Filtros de busca",
+              "showVacancy": "Exibir vagas:",
+              "gupyBadge": "Empresas com Selo Feedback",
+              "pwd": "Afirmativas para PCD",
+              "order": "Ordenar",
+              "orderRecent": "Mais recentes",
+              "orderLessThan": "Menos de 50 candidaturas",
+              "orderOldest": "Menos recentes",
+              "publicationDate": "Data de publica\u00e7\u00e3o",
+              "publicationDateAny": "Qualquer data",
+              "publicationDateToday": "Hoje",
+              "publicationDateLast5Days": "\u00daltimos 5 dias",
+              "publicationDateLast15Days": "\u00daltimos 15 dias",
+              "publicationDateLastMonth": "\u00daltimo M\u00eas",
+              "clear": "Limpar",
+              "apply": "Aplicar"
+            },
+            "list-filters": {
+              "remove": "Remover",
+              "aria-label": "Lista de filtros",
+              "not-remote": "N\u00e3o remoto",
+              "only-remote": "Remoto",
+              "show-more": "ver mais",
+              "show-less": "ver menos"
+            },
+            "fieldset-more-filters": {
+              "legend": "Mais filtros",
+              "gupy-badge": {
+                "label": "Apenas empresas com selo de feedback",
+                "infotip": {
+                  "content": "Empresas com alta taxa de retorno e atividade nas vagas nos \u00faltimos 3 meses"
+                }
+              },
+              "pwd": {
+                "label": "Vagas tamb\u00e9m para PcD"
+              },
+              "careerPageName": {
+                "label": "Empresa"
+              }
+            },
+            "dropdown": {
+              "noOptionsMessage": "Nenhum item encontrado"
+            },
+            "applications": {
+              "skipToListLink": "Ir para lista de candidaturas",
+              "title": "Minhas candidaturas",
+              "pageSubtitle": "Acompanhe abaixo o andamento de todas as vagas que voc\u00ea est\u00e1 participando.",
+              "companyLogoAlt": "Logo da empresa",
+              "HeadingWrapperLabel": "T\u00edtulo e subt\u00edtulo da p\u00e1gina",
+              "ApplicationsListingLabel": "Listagem de candidaturas",
+              "yourProgress": "Seu Progresso",
+              "jobLocation": {
+                "icon": "\u00cdcone de Localiza\u00e7\u00e3o do Trabalho",
+                "caption": "N\u00e3o informado"
+              },
+              "jobModel": {
+                "icon": "\u00cdcone de Modelo de Trabalho",
+                "remote": "Remoto",
+                "onSite": "Presencial",
+                "hybrid": "H\u00edbrido"
+              },
+              "jobType": "\u00cdcone de Tipo de Trabalho",
+              "jobPwd": {
+                "icon": "\u00cdcone de Acessibilidade",
+                "isPwd": "Tamb\u00e9m p/ PcD"
+              },
+              "tabPanel": "Status das candidaturas",
+              "tabInProgress": "Em andamento",
+              "tabFinished": "Finalizadas",
+              "tabTalentPool": "Em banco de talentos",
+              "jobSearch": {
+                "placeholder": "Digite o nome da vaga ou empresa",
+                "searchButtonLabel": "Buscar",
+                "searchInputLabel": "Busca de vaga ou empresa",
+                "results": "Minhas candidaturas {{resultsString}}",
+                "term": " com o termo {{term}}",
+                "company": "para empresa {{company}}",
+                "location": " em {{location}}"
+              },
+              "applicationCard": {
+                "giveUpButton": {
+                  "text": "Desistir",
+                  "ariaLabel": "Desistir da Vaga"
+                },
+                "progressButton": {
+                  "text": "Ver andamento",
+                  "ariaLabel": "Ver andamento da candidatura"
+                },
+                "jobCompany": "Empresa {{jobCompany}}",
+                "jobName": "Vaga {{jobName}}",
+                "jobLocation": "Local de trabalho:",
+                "jobWorkplaceType": "Modelo de trabalho {{jobWorkplaceType}}.",
+                "jobType": "Essa vaga \u00e9 do tipo {{jobType}}.",
+                "pwd": "Esta vaga \u00e9 tamb\u00e9m para PcD.",
+                "applicationProgress": "Seu progresso nessa candidatura \u00e9 {{jobStepCurrent}} de {{jobStepCount}}.",
+                "applicationPosition": "Candidatura {{applicationIndex}} de {{applicationsCount}}.",
+                "dialogGiveUpTitle": "Desistir da candidatura",
+                "dialogGiveUpText": "Tem certeza que deseja desistir da vaga? Essa a\u00e7\u00e3o n\u00e3o poder\u00e1 ser desfeita.",
+                "dialogGiveUpButton": "Desistir",
+                "dialogGiveUpCancelButton": "Cancelar",
+                "toastGiveUpSuccess": "Voc\u00ea desistiu da vaga.",
+                "toastGiveUpError": "N\u00e3o foi poss\u00edvel desistir da vaga. Tente novamente mais tarde."
+              },
+              "errors": {
+                "500": {
+                  "title": "Erro interno do servidor",
+                  "subtitle": "Tente novamente mais tarde.",
+                  "illustrationAlt": "Imagem representando um erro 500 - Erro interno do servidor"
+                }
+              },
+              "pagination": {
+                "paginationAriaLabel": "Pagina\u00e7\u00e3o do resultado da busca",
+                "nextButtonAriaLabel": "V\u00e1 para pr\u00f3xima p\u00e1gina",
+                "previousButtonAriaLabel": "V\u00e1 para p\u00e1gina anterior",
+                "pageButtonAriaLabel": "P\u00e1gina",
+                "pageButtonAriaLabelAfter": "de {{totalPages}}"
+              },
+              "noFilteredApplications": {
+                "title": "Nenhum resultado encontrado",
+                "subtitle": "Verifique os termos e filtros de busca e tente novamente.",
+                "illustrationAlt": "Imagem representando que n\u00e3o h\u00e1 candidaturas com os filtros selecionados"
+              },
+              "applicationsEmptyState": {
+                "title": "Voc\u00ea ainda n\u00e3o possui candidaturas.",
+                "illustrationAlt": "Imagem representando que o usu\u00e1rio n\u00e3o possui candidaturas",
+                "button": {
+                  "text": "Buscar Oportunidades",
+                  "ariaLabel": "Buscar Oportunidades"
+                }
+              },
+              "applicationStatus": {
+                "ariaLabel": "Status da candidatura",
+                "icon": "\u00cdcone de status da candidatura",
+                "candidateHired": "Voc\u00ea chegou \u00e0 etapa final nesse processo",
+                "candidateReproved": "Voc\u00ea n\u00e3o avan\u00e7ou nesse processo",
+                "jobClosed": "Vaga encerrada pela empresa",
+                "jobFrozen": "Vaga congelada pela empresa"
+              },
+              "hints": {
+                "processFeedback": {
+                  "message": "Voc\u00ea sabia que o retorno dos processos seletivos \u00e9 enviado pela empresa \u00e0 qual voc\u00ea se candidatou?",
+                  "linkText": "Saiba mais sobre retornos de processos seletivos",
+                  "url": "https://suporte-candidatos.gupy.io/s/article/Por-que-a-Gupy-nao-da-um-retorno-do-processo-seletivo?language=pt_BR"
+                },
+                "applicationsEnded": {
+                  "message": "Est\u00e1 com d\u00favidas sobre o motivo do encerramento das suas candidaturas?",
+                  "linkText": "Saiba mais sobre os tipos de encerramento de processos seletivos",
+                  "url": "https://suporte-candidatos.gupy.io/s/article/Por-que-minha-candidatura-foi-encerrada?language=pt_BR"
+                },
+                "applicationProgress": {
+                  "message": "J\u00e1 concluiu uma etapa e ainda est\u00e1 aguardando a libera\u00e7\u00e3o da pr\u00f3xima?",
+                  "linkText": "Saiba mais sobre movimenta\u00e7\u00f5es em etapas do processo seletivo",
+                  "url": "https://suporte-candidatos.gupy.io/s/article/Ja-conclui-a-etapa-mas-ainda-nao-liberaram-a-proxima-como-desbloquear?language=pt_BR"
+                },
+                "applicationTalentPool": {
+                  "message": "As inscri\u00e7\u00f5es em bancos de talentos s\u00e3o uma forma de demonstrar seu interesse em eventuais oportunidades futuras na empresa.",
+                  "linkText": "Saiba mais",
+                  "url": "https://suporte-candidatos.gupy.io/s/article/Vaga-Tipo-Banco-de-Talentos?language=pt_BR"
+                }
+              }
+            },
+            "filter-applications-dialog-mobile": {
+              "trigger": {
+                "ariaLabel": "Acessar filtros para a busca de candidaturas",
+                "text": "Filtrar"
+              },
+              "dialog": {
+                "title": "Filtrar",
+                "primaryButton": {
+                  "text": "Aplicar filtros"
+                },
+                "secondaryButton": {
+                  "text": "Limpar filtros"
+                }
+              }
+            },
+            "workplace-type": {
+              "legend": "Modelo de trabalho",
+              "options": {
+                "onSite": "Presencial",
+                "remote": "Remoto",
+                "hybrid": "H\u00edbrido"
+              }
+            },
+            "maintenance-information-dialog": {
+              "title": "Aviso de manuten\u00e7\u00e3o programada",
+              "paragraph": "Informamos que o nosso time de tecnologia realizar\u00e1 uma manuten\u00e7\u00e3o na plataforma este s\u00e1bado, dia 11/11/2023, come\u00e7ando meia noite e finalizando \u00e0s 8h da manh\u00e3. Por esta raz\u00e3o, nossa plataforma estar\u00e1 indispon\u00edvel durante esse per\u00edodo.",
+              "confirmButton": "Ok, entendi."
+            },
+            "opt-in-talent-portal": {
+              "header": "Banco de Talentos Gupy",
+              "toastPostSharedTalentPoolError": "Ops! Ocorreu um erro. Tente novamente."
+            },
+            "opt-in-join-modal": {
+              "header": "Tenha seu perfil indicado!",
+              "firstParagraph": "Se voc\u00ea recebeu esta mensagem \u00e9 porque escolhemos voc\u00ea para participar do lan\u00e7amento de uma nova solu\u00e7\u00e3o, o Banco de Talentos Gupy.",
+              "lastParagraph": "Diferentes empresas poder\u00e3o visualizar seu curr\u00edculo e te convidar para outros processos seletivos, se assim optarem.",
+              "seeMore": "Saiba mais",
+              "buttonJoin": "Quero participar",
+              "buttonNotJoinNow": "N\u00e3o quero participar agora",
+              "checkbox": "N\u00e3o me mostre mais isso",
+              "altImage": "Imagem que representa o Banco de Talentos Gupy",
+              "buttonLoading": "Carregando..."
+            },
+            "opt-in-join-talent-portal-modal": {
+              "header": "Participe do Banco de Talentos Gupy!",
+              "firstParagraph": "Compartilhe seu curr\u00edculo e comece a ser recomendado para diferentes clientes da Gupy!",
+              "lastParagraph": "Seu curr\u00edculo ser\u00e1 recomendado em vagas de com alta afinidade com o seu perfil profissional.",
+              "curriculumCheckbox": "Quero compartilhar meu curr\u00edculo",
+              "diversityCheckbox": "Quero compartilhar meus dados de diversidade",
+              "privacyInfo": "Ao participar, voc\u00ea declara que aceita e est\u00e1 de acordo com nossos",
+              "termsOfUse": "Termos de uso",
+              "and": "e",
+              "privacyNotice": "Aviso de Privacidade",
+              "buttonJoinTalentPortal": "Participar do Banco de Talentos Gupy",
+              "buttonNotJoinNow": "N\u00e3o quero participar agora",
+              "buttonLoading": "Carregando..."
+            },
+            "opt-in-do-not-join-now-modal": {
+              "header": "N\u00e3o vamos compartilhar seus dados!",
+              "secondPhrase": "e escolha a op\u00e7\u00e3o \"Compartilhar meu curriculo\".",
+              "link": "\"Gerenciar compartilhamento com o Banco de Talentos Gupy\"",
+              "button": "Ok, entendi",
+              "firstPhrase": "Caso mude de ideia, visite \"Minha conta\",",
+              "altImage": "Imagem de aten\u00e7\u00e3o"
+            },
+            "opt-in-see-more-modal": {
+              "header": "O que \u00e9 o Banco de Talentos Gupy?",
+              "firstParagraph": "O Banco de Talentos Gupy \u00e9 a",
+              "firstParagraphBold": "porta de entrada para novas oportunidades.",
+              "secondParagraph": "Ao compartilhar seu curr\u00edculo, voc\u00ea aumenta sua visibilidade e permite que empresas encontrem seu perfil.",
+              "thirdParagraph": "A intelig\u00eancia artificial da Gupy tamb\u00e9m pode recomendar seu perfil a vagas compat\u00edveis com sua experi\u00eancia, de forma autom\u00e1tica, conectando voc\u00ea \u00e0s melhores oportunidades do mercado.",
+              "buttonJoin": "Quero participar",
+              "buttonNotJoinNow": "N\u00e3o quero participar agora",
+              "altImage": "Imagem que representa o Banco de Talentos Gupy",
+              "buttonLoading": "Carregando..."
+            },
+            "opt-in-talent-portal-success-modal": {
+              "header": "Agora voc\u00ea faz parte do Banco de Talentos Gupy",
+              "paragraph": "Seu perfil ser\u00e1 exibido para as empresas e elas poder\u00e3o visualizar seu curr\u00edculo e te enviar para processo seletivos realizados na Gupy.",
+              "firstPhrase": "Caso mude de ideia, visite \"Minha conta\",",
+              "secondPhrase": "e escolha a op\u00e7\u00e3o \"Compartilhar meu curr\u00edculo\".",
+              "link": "\"Gerenciar compartilhamento com o Banco de Talentos Gupy\"",
+              "button": "Ok, entendi",
+              "altImage": "Imagem de sucesso"
+            },
+            "opt-in-do-not-join-talent-portal": {
+              "header": "N\u00e3o vamos compartilhar seus dados!",
+              "paragraph": "Ao optar por cancelar o servi\u00e7o, seu curr\u00edculo n\u00e3o ser\u00e1 mais oferecido automaticamente para as empresas alinhadas ao seu perfil. Agradecemos por utilizar o Banco de Talentos da Gupy!",
+              "firstPhrase": "Caso mude de ideia, visite \"minha conta\",",
+              "secondPhrase": "e escolha a op\u00e7\u00e3o \"Compartilhar meu curr\u00edculo\".",
+              "link": "\"Gerenciar compartilhamento com o Banco de Talentos Gupy\"",
+              "button": "Ok, entendi",
+              "altImage": "Imagem de aten\u00e7\u00e3o"
+            },
+            "job-search-drawer": {
+              "ariaLabelGroup": "Buscar vagas"
+            },
+            "drawer": {
+              "closeMenu": "Fechar menu"
+            },
+            "company-listing": {
+              "section": "Empresas encontradas",
+              "title": "Empresas",
+              "companyItem": "Ir para a p\u00e1gina de carreira"
+            },
+            "skip-content-link": {
+              "text": "Pular para o conte\u00fado principal"
+            },
+            "talent-portal-banner": {
+              "bannerAlt": "Ao se cadastrar, voc\u00ea pode receber convites para vagas que correspondem ao seu perfil."
+            },
+            "navbar": {
+              "gupyLogo": "Gupy Acesse a p\u00e1gina inicial do Portal de vagas da Gupy",
+              "helpCenter": "Central de Ajuda",
+              "aboutUs": "Sobre n\u00f3s",
+              "talkToSupport": "Falar com o Suporte",
+              "uploadCV": "Cadastrar CV gr\u00e1tis",
+              "signIn": "Entrar",
+              "myResume": "Meu curr\u00edculo",
+              "trackApplications": "Acompanhar candidaturas",
+              "mentorship": "Mentorias",
+              "interviewSimulator": "Simulador de Entrevistas",
+              "burguerMenu": {
+                "menuButtonAriaLabel": "Menu da pessoa usu\u00e1ria",
+                "login": "Entrar",
+                "loginLabel": "Acesso a \u00e1rea logada",
+                "editProfile": "Editar perfil",
+                "myAccount": "Minha conta",
+                "myCurriculum": "Meu curr\u00edculo",
+                "myApplications": "Minhas candidaturas",
+                "companiesAppliedListGroup": "Lista de empresas que me candidatei",
+                "candidateSupport": "Suporte ao candidato",
+                "termsAndConditions": "Termos de Uso da Gupy",
+                "privacyPolicy": "Aviso de Privacidade da Gupy",
+                "logout": "Sair",
+                "companiesApplied": "Empresas que me candidatei",
+                "goBackToMainMenu": "Voltar ao menu principal",
+                "about": "Sobre",
+                "messages": "Mensagens",
+                "closeButtonAriaLabel": "Fechar menu",
+                "mentorship": "Mentorias",
+                "interviewSimulator": "Simulador de Entrevistas",
+                "bannerPortal": {
+                  "altImage": "Imagem representando acesso ao portal de vagas",
+                  "heading": "Encontre novas vagas",
+                  "textContent": "Acesse o nosso portal para encontrar uma nova oportunidade.",
+                  "accessPortalButton": "Acessar portal"
+                }
+              }
+            },
+            "quick-apply": {
+              "title": "An\u00e1lise de candidatura",
+              "greeting": "Ol\u00e1, {{name}}",
+              "jobInfo": "Recebemos sua candidatura para a vaga de {{jobName}} na {{careerPageName}}.",
+              "reason": "Indique o motivo da sua solicita\u00e7\u00e3o abaixo. Seus dados ser\u00e3o exclu\u00eddos da candidatura ao confirmar.",
+              "dontRecognize": "N\u00e3o reconhe\u00e7o esta candidatura",
+              "quitProcess": "N\u00e3o desejo mais participar do processo seletivo",
+              "confirm": "Confirmar",
+              "removed": "Candidatura removida!",
+              "actionCompleted": "A\u00e7\u00e3o conclu\u00edda com sucesso, a empresa j\u00e1 foi informada que voc\u00ea n\u00e3o est\u00e1 participando do processo."
+            },
+            "search-input": {
+              "recentSearchTip": "Buscas recentes",
+              "searchTerm": "Busque por uma vaga",
+              "localSearchTerm": "Selecione uma cidade ou estado",
+              "searchButton": "Buscar vagas",
+              "locationError": "Cidade ou estado inv\u00e1lido"
+            },
+            "search-section": {
+              "headTitle": "Portal Gupy | Encontre Vagas de Emprego que Impulsionam sua Carreira",
+              "metaDescription": "Descubra as melhores vagas de emprego no Portal Gupy. Candidate-se de forma r\u00e1pida e f\u00e1cil e encontre oportunidades que v\u00e3o impulsionar sua carreira nas maiores empresas do Brasil!",
+              "title": "Conectando o seu talento \u00e0s melhores empresas",
+              "description": "Aqui voc\u00ea encontra vagas reais para impulsionar ainda mais a sua carreira",
+              "exploreAllJobs": "Explorar todas as vagas"
+            },
+            "job-search-results-title": {
+              "heading": "Aplique para Vagas de {{searchTerm}}{{workplaceTypes}}{{location}}",
+              "headingCompany": "Vagas abertas na Empresa {{company}}",
+              "results": "resultados",
+              "result": "resultado"
+            },
+            "redesign-footer": {
+              "jobsByState": "Vagas por estado",
+              "mostSearchedCities": "Cidades mais buscadas",
+              "mostSearchedRoles": "Cargos mais buscados",
+              "topSearches": "Mais buscados",
+              "socialMedia": "Redes sociais",
+              "aboutGupy": "Sobre a Gupy",
+              "copyRight": "\u00a92015-{{currentYear}} Gupy. Todos os direitos reservados.",
+              "terms": "Termos de uso",
+              "privacy": "Pol\u00edtica de privacidade",
+              "whatIsGupy": "O que \u00e9 a Gupy",
+              "forCandidates": "Para pessoas candidatas",
+              "gupyIa": "Entenda Agentes de IA Gupy ",
+              "feedback": "Selo de Feedback",
+              "updates": "Novidades",
+              "helpCenter": "Central de Ajuda",
+              "contactSupport": "Falar com o Suporte",
+              "footerGupyLogo": "Logotipo da Gupy no rodap\u00e9",
+              "news": "Novidades",
+              "gupyIaVoiceOver": "Entenda a Intelig\u00eancia Artificial da Gupy"
+            }
+          }
+        },
+        "initialLocale": "pt",
+        "userConfig": {
+          "i18n": {
+            "locales": [
+              "pt",
+              "en",
+              "es"
+            ],
+            "defaultLocale": "pt",
+            "localeDetection": false
+          },
+          "default": {
+            "i18n": {
+              "locales": [
+                "pt",
+                "en",
+                "es"
+              ],
+              "defaultLocale": "pt",
+              "localeDetection": false
+            }
+          }
+        }
+      },
+      "userLanguage": "pt"
+    },
+    "__N_SSP": true
+  },
+  "page": "/job-search/[pid]",
+  "query": {
+    "pid": "term=analista"
+  },
+  "buildId": "mmimyFY7vpv1dRcruT1zn",
+  "isFallback": false,
+  "gssp": true,
+  "locale": "pt",
+  "locales": [
+    "pt",
+    "en",
+    "es"
+  ],
+  "defaultLocale": "pt",
+  "scriptLoader": [
+    {
+      "id": "privacy-tools-banner",
+      "nonce": "NThlYjllOTYtZGYwNy00NzNmLWE5N2YtN2JhZTgzNTA3YjJi",
+      "src": "https://cdn.privacytools.com.br/public_api/banner/pt/script/bottom/0mpM21114111.js?t=1",
+      "strategy": "afterInteractive"
+    },
+    {
+      "id": "hotjar",
+      "nonce": "NThlYjllOTYtZGYwNy00NzNmLWE5N2YtN2JhZTgzNTA3YjJi",
+      "src": "https://static.hotjar.com/c/hotjar-809470.js?sv=6",
+      "strategy": "afterInteractive"
+    }
+  ]
+}

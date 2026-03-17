@@ -9,7 +9,7 @@ st.set_page_config(page_title="Gupy Hunter 2026", layout="wide")
 def buscar_vagas_gupy(termo):
     vagas_lista = []
 
-    url = "https://portal.api.gupy.io/api/job"
+    url = "https://employability-portal.gupy.io/api/v1/jobs"
 
     headers = {
         "User-Agent": "Mozilla/5.0",
@@ -20,9 +20,11 @@ def buscar_vagas_gupy(termo):
     for page in range(1, 5):
 
         params = {
-            "searchTerm": termo,
-            "page": page,
-            "limit": 50
+            "jobName": termo,
+            "offset": (page - 1) * 50,
+            "limit": 50,
+            "sortBy": "publishedDate",
+            "sortOrder": "desc"
         }
 
         try:
@@ -37,7 +39,7 @@ def buscar_vagas_gupy(termo):
                 continue
 
             dados = response.json()
-            jobs = dados.get("jobs", [])
+            jobs = dados.get("data", [])
 
             for vaga in jobs:
 
@@ -54,13 +56,14 @@ def buscar_vagas_gupy(termo):
                     dt_obj = datetime.min
 
                 # normalizar modalidade
-                workplace = vaga.get("workplaceType", "").upper()
+                workplace = vaga.get("workplaceType") or ""
+                workplace = workplace.upper()
 
-                if workplace == "REMOTE":
+                if workplace == "REMOTE" or vaga.get("isRemoteWork"):
                     modalidade = "Remoto"
                 elif workplace == "HYBRID":
                     modalidade = "Híbrido"
-                elif workplace == "ONSITE":
+                elif workplace in ["ONSITE", "ON-SITE"]:
                     modalidade = "Presencial"
                 else:
                     modalidade = "Indefinido"
@@ -68,10 +71,10 @@ def buscar_vagas_gupy(termo):
                 vagas_lista.append({
                     "data_dt": dt_obj,
                     "Data": dt_obj.strftime('%d/%m/%Y') if dt_obj != datetime.min else "",
-                    "Empresa": vaga.get("companyName", "").upper(),
+                    "Empresa": vaga.get("careerPageName", "").upper(),
                     "Vaga": vaga.get("name", ""),
                     "Modalidade": modalidade,
-                    "Link": f"https://portal.gupy.io/jobs/{vaga.get('id')}"
+                    "Link": vaga.get("jobUrl", f"https://portal.gupy.io/jobs/{vaga.get('id')}")
                 })
 
         except Exception as e:
@@ -86,7 +89,7 @@ def buscar_vagas_gupy(termo):
 # Interface
 # ------------------------
 
-st.title("🎯 Gupy Real-Time Hunter")
+st.title("🕵️ Schenkel JobSearch Gupy Portal")
 
 with st.sidebar:
     st.header("Configurações")
